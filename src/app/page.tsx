@@ -1,3 +1,9 @@
+import HeroSection from "@/sections/HeroSection/HeroSection";
+
 export default function Home() {
-  return <main className="">RC-Karts</main>;
+  return (
+    <main className="">
+      <HeroSection />
+    </main>
+  );
 }

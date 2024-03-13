@@ -1,5 +1,6 @@
 import Footer from "@/ui/Footer";
-import Header from "@/ui/Header";
+import Header from "@/ui/Header/Header";
+import Loader from "@/ui/Loader/Loader";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -21,6 +22,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Header />
         {children}
+        <Loader />
         <Footer />
       </body>
     </html>
