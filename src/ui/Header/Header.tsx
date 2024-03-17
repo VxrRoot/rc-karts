@@ -26,12 +26,19 @@ export default function Header() {
     }
   };
 
+  const handleOpenMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
+    !mobileMenuOpen
+      ? (document.body.style.overflowY = "hidden")
+      : (document.body.style.overflowY = "auto");
+  };
+
   useEffect(() => {
     setMobileMenuOpen(false);
   }, [pathname]);
 
   return (
-    <header className={" h-16 bg-primaryc"}>
+    <header className={"h-20 bg-primaryc"}>
       <nav
         className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8 lg:py-0 h-full"
         aria-label="Global"
@@ -42,12 +49,7 @@ export default function Header() {
           </Link>
         </div>
         <div className="flex lg:hidden">
-          <Burger
-            open={mobileMenuOpen}
-            onClick={() => {
-              setMobileMenuOpen(!mobileMenuOpen);
-            }}
-          />
+          <Burger open={mobileMenuOpen} onClick={handleOpenMenu} />
         </div>
         <div className="hidden lg:flex lg:items-center lg:gap-x-12 lg:flex-1 lg:justify-end">
           <Link
@@ -89,9 +91,9 @@ export default function Header() {
       </nav>
 
       <div
-        className={`h-full lg:hidden absolute w-full bg-gradient-to-tr from-[#FF3E27] to-[#FF3061] border-0 mx-0 ${
+        className={`h-full lg:hidden fixed w-full bg-gradient-to-tr from-[#FF3E27] to-[#FF3061] border-0 mx-0 ${
           mobileMenuOpen
-            ? "left-0 overflow-hidden z-40 translate-x-0 top-0"
+            ? "left-0 overflow-hidden z-50 translate-x-0 top-0"
             : " translate-x-[-100%]"
         }`}
       >
@@ -100,8 +102,8 @@ export default function Header() {
             RC - KARTS
           </Link>
         </div>
-        <div className="mt-6  h-full flex pt-16 justify-center">
-          <div className="-my-6 divide-y divide-gray-200">
+        <div className="mt-6 h-full flex pt-16 justify-center">
+          <div className="-my-6 divide-gray-200">
             <div className="space-y-2 py-6 flex flex-col items-center">
               <Link
                 href={links.homePage}
@@ -136,7 +138,9 @@ export default function Header() {
                 Skontaktuj się
               </span>
             </div>
-            <div className={`${styles.icon_wr} flex gap-4`}>
+            <div
+              className={`${styles.icon_wr} items-center  justify-center flex gap-4`}
+            >
               <FacebookIcon />
               <InstaIcon />
             </div>
