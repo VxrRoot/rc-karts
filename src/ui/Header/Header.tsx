@@ -1,10 +1,11 @@
 "use client";
 import { links } from "@/constants";
-
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Burger } from "../Burger/Burger";
+import { InstaIcon, FacebookIcon } from "@/assets/icons";
+import styles from "./Header.module.scss";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -30,7 +31,7 @@ export default function Header() {
   }, [pathname]);
 
   return (
-    <header className={" h-16 bg-gradient-to-r from-[#FF3E27] to-[#FF3061]"}>
+    <header className={" h-16 bg-primaryc"}>
       <nav
         className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8 lg:py-0 h-full"
         aria-label="Global"
@@ -76,10 +77,14 @@ export default function Header() {
           </Link>
           <span
             onClick={scrollToContact}
-            className=" text-md tracking-wider whitespace-nowrap font-semibold leading-6 text-white bg-primaryGreen py-2 px-4 rounded-2xl transition-all cursor-pointer"
+            className=" text-md tracking-wider whitespace-nowrap font-semibold leading-6 text-white bg-secondaryc py-2 px-4 rounded-full transition-all cursor-pointer"
           >
             Skontaktuj się
           </span>
+          <div className={`${styles.icon_wr} flex gap-4`}>
+            <FacebookIcon />
+            <InstaIcon />
+          </div>
         </div>
       </nav>
 
@@ -126,11 +131,14 @@ export default function Header() {
             <div className="py-6 flex items-center justify-center">
               <span
                 onClick={scrollToContact}
-                // className="-mx-3 block rounded-lg px-3 py-2.5 text-3xl font-semibold leading-7 text-white hover:text-gray-950"
                 className="text-2xl whitespace-nowrap font-semibold leading-6 text-white  py-2 px-4 rounded-2xl transition-all cursor-pointer"
               >
                 Skontaktuj się
               </span>
+            </div>
+            <div className={`${styles.icon_wr} flex gap-4`}>
+              <FacebookIcon />
+              <InstaIcon />
             </div>
           </div>
         </div>

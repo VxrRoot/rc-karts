@@ -19,9 +19,10 @@ const config = {
     },
     extend: {
       colors: {
-        primaryGreen: "#47D446",
-        primaryRed: "#FF3061",
-        secondaryRed: "#FF3C2F",
+        primaryc: "var(--primaryc)",
+        secondaryc: "var(--primaryc",
+        redGradient: "bg-gradient-to-r from-[#FF3E27] to-[#FF3061]",
+        // secondaryRed: "#FF3C2F",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
