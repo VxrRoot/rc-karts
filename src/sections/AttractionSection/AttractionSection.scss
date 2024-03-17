@@ -1,0 +1,21 @@
+.splide {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+.splide__pagination__page {
+  background-color: #b5b5b5 !important;
+  opacity: 1 !important;
+  width: 0.8rem !important;
+  height: 0.8rem !important;
+  border-radius: 50% !important;
+
+  &.is-active {
+    background-color: var(--secondaryc) !important;
+  }
+}
+
+.splide__slide {
+  opacity: 1 !important;
+  border: none !important;
+}
