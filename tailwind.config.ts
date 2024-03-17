@@ -20,7 +20,7 @@ const config = {
     extend: {
       colors: {
         primaryc: "var(--primaryc)",
-        secondaryc: "var(--primaryc",
+        secondaryc: "var(--secondaryc)",
         redGradient: "bg-gradient-to-r from-[#FF3E27] to-[#FF3061]",
         // secondaryRed: "#FF3C2F",
         border: "hsl(var(--border))",
