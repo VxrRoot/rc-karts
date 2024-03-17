@@ -19,7 +19,7 @@ const Loader = () => {
       }`}
     >
       <Image
-        className="w-80 h-auto animate-pulse"
+        className="w-48 h-auto animate-pulse"
         alt="loader"
         src={GokartSvg}
       />

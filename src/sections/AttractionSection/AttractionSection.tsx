@@ -41,27 +41,27 @@ const attractions = [
 
 const AttractionSection = () => {
   return (
-    <section className={``}>
+    <section className={`mb-20`}>
       <h2 className="p-0 m-0 text-[#3F8D40] font-semibold text-3xl pl-14 md:pl-32 xl:pl-44">
         Atrakcje
       </h2>
       <Splide
         options={{
-          slidesOffsetBefore: 20,
-          padding: {
-            left: 30,
-          },
           mediaQuery: "min",
           type: "slide",
-          perPage: 1.5,
-          perMove: 3,
+          perPage: 1,
+          perMove: 1,
           arrows: false,
+          focus: 0,
+          omitEnd: true,
           pagination: true,
           isNavigation: true,
+          drag: "free",
           breakpoints: {
-            1500: { perPage: 4.5 },
-            1200: { perPage: 3.5, padding: { left: 150 } },
-            860: { perPage: 2.5, padding: { left: 100 } },
+            1500: { perPage: 4.5, perMove: 4 },
+            1200: { perPage: 3.5, perMove: 3, padding: { left: 150 } },
+            860: { perPage: 2.5, perMove: 2, padding: { left: 100 } },
+            480: { perPage: 1.5, perMove: 1, padding: { left: 30 } },
           },
         }}
         aria-label="Attraction slider"
@@ -69,10 +69,10 @@ const AttractionSection = () => {
       >
         {attractions.map((item, idx) => (
           <SplideSlide key={item.id} className="py-10 text-white">
-            <div className={`bg-primaryc shadow-xl rounded-3xl p-12 mx-4`}>
+            <div className={`bg-primaryc shadow-xl rounded-3xl p-10 mx-4`}>
               <Image alt={item.title} src={item.img} className="rounded-lg" />
-              <h4 className="pt-8 pb-6">{item.title}</h4>
-              <p>{item.desc}</p>
+              <h4 className="pt-8 pb-6 font-semibold text-2xl">{item.title}</h4>
+              <p className="font-medium">{item.desc}</p>
             </div>
           </SplideSlide>
         ))}
