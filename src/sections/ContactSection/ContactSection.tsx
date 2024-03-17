@@ -15,8 +15,8 @@ const ContactSection = () => {
                     <h3 className="text-secondary text-3xl mb-5 mt-10">Skontaktuj się z nami</h3>
                     <div className="rounded-3xl bg-[#f2f2f2]  shadow-xl h-[30rem] p-8">
                         <form action="" className="flex flex-col gap-2 justify-center h-full">
-                            <Input label="Twój email" placeholder="example@email.com" />
-                            <Input label="Twój numer telefonu" placeholder="123-456-789" />
+                            <Input name="email" label="Twój email" placeholder="example@email.com" />
+                            <Input name="phone "label="Twój numer telefonu" placeholder="123-456-789" />
                             <TextArea label="Twoja wiadomość" placeholder="Twoja wiadomość" name="message" />
                             <button className="bg-gradient-to-r from-[#FF3E27] to-[#FF3061] py-2 px-10 rounded-2xl text-white w-32">
                                 Wyślij
