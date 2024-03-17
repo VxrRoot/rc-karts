@@ -1,0 +1,16 @@
+.blob {
+    height: 35rem;
+    width: 35rem;
+    position: relative;
+    filter: drop-shadow(10px 10px 0px rgba(138, 250, 166, 0.616));
+    transition: 0.3s;
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    > svg {
+        height: 100%;
+        width: 100%;
+        fill: var(--primaryc);
+    }
+}
