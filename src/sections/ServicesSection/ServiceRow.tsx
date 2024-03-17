@@ -19,10 +19,9 @@ interface IServiceRow {
 
 export const ServiceRow: FC<IServiceRow> = ({ heading, text, src, alt, isReversed = false }) => {
     return (
-        <div className={`${isReversed ? 'lg:flex-row-reverse' : 'lg:flex-row'} flex lg:justify-around z-10 lg:px-32 pt-48 pb-20  justify-center flex-col bg-transparent items-center`}>
-            <Blob heading="Odwiedź nas" text="
-Zapraszamy do świata niezapomnianych przygód i radosnej zabawy w naszym parku atrakcji dmuchanych! Jesteśmy miejscem, gdzie każde dziecko znajdzie coś dla siebie – od gigantycznych zjeżdżalni, przez labirynty, aż po interaktywne zamki i baseny z piłeczkami. Nasz park to idealne miejsce na rodzinną eskapadę, gdzie bezpieczeństwo i zabawa idą w parze." />
-            <ServiceImg alt={alt} src={src} />
+        <div className={`${isReversed ? 'lg:flex-row-reverse' : 'lg:flex-row'} flex lg:justify-around z-10 max-w-7xl py-20  justify-center flex-col bg-transparent items-center`}>
+            <Blob heading={heading} text={text}/>
+            <ServiceImg alt={alt} src={src}  reversedShadow={isReversed}/>
         </div>
     );
 };
