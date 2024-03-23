@@ -40,14 +40,14 @@ export default function Header() {
   }, [pathname]);
 
   return (
-    <header className={"h-20 absolute w-full z-30"}>
+    <header className={"h-20 absolute w-full z-40"}>
       <nav
         className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8 lg:py-0 h-full"
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
           <Link href={links.homePage} className="-m-1.5 text-white p-1.5">
-            <Image src={logo} alt='logo'></Image>
+            <Image src={logo} alt="logo"></Image>
           </Link>
         </div>
         <div className="flex lg:hidden">
