@@ -95,7 +95,7 @@ export default function Header() {
       <div
         className={`h-full lg:hidden fixed w-full bg-gradient-to-tr from-[#FF3E27] to-[#FF3061] border-0 mx-0 ${
           mobileMenuOpen
-            ? "left-0 overflow-hidden z-50 translate-x-0 top-0"
+            ? "left-0 overflow-hidden z-40 translate-x-0 top-0"
             : " translate-x-[-100%]"
         }`}
       >

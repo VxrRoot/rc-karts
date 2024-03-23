@@ -18,6 +18,10 @@ const config = {
       },
     },
     extend: {
+      screens: {
+        "3xl": "1830px",
+        "4xl": "2100px",
+      },
       colors: {
         primaryc: "var(--primaryc)",
         secondaryc: "var(--secondaryc)",

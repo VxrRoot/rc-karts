@@ -8,7 +8,7 @@ const baloo = Baloo_Chettan_2({ subsets: ["latin"], weight: ["600", "800"] });
 const AboutSection = () => {
   return (
     <section
-      className={`flex px-8 flex-col items-center -mt-28 lg:-mt-28 2xl:-mt-40 3x relative bg-cover bg-center z-30 bg-[url('../assets/about-background.svg')] w-full min-h-[1000px] lg:min-h-[900px]`}
+      className={`flex px-8 flex-col items-center -mt-32 lg:-mt-32 2xl:-mt-40 relative bg-cover bg-center z-30 bg-[url('../assets/about-background.svg')] w-full h-[900px] 3xl:h-[1100px] 4xl:h-[1300px]`}
     >
       <Image
         alt="go-cart image"
