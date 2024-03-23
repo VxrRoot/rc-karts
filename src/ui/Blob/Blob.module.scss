@@ -4,13 +4,24 @@
     position: relative;
     filter: drop-shadow(10px 10px 0px rgba(138, 250, 166, 0.616));
     transition: 0.3s;
+    transform: scale(1.1);
     &:hover {
-        transform: scale(1.05);
+        transform: scale(1.2);
     }
 
     > svg {
         height: 100%;
         width: 100%;
-        fill: var(--primaryc);
     }
+}
+
+.stop1 {
+    stop-color: red;
+}
+.stop2 {
+    stop-color: black;
+    stop-opacity: 0;
+}
+.stop3 {
+    stop-color: blue;
 }

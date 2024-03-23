@@ -19,7 +19,7 @@ export const TextArea: FC<ITextArea> = ({ placeholder, name, label }) => {
                 name={name}
                 placeholder={placeholder}
                 rows={6}
-                className=" input bg-transparent outline-none border-none pl-6 pr-10 py-2 w-full font-sans font-semibold rounded-3xl overflow-hidden bg-white shadow-xl w-100"
+                className=" input bg-transparent outline-none border-none pl-6 pr-10 py-2 w-full font-sans rounded-3xl overflow-hidden bg-white shadow-xl w-100"
             />
         </div>
     );

@@ -19,7 +19,7 @@ interface IServiceRow {
 
 export const ServiceRow: FC<IServiceRow> = ({ heading, text, src, alt, isReversed = false }) => {
     return (
-        <div className={`${isReversed ? 'lg:flex-row-reverse' : 'lg:flex-row'} flex lg:justify-around z-10 max-w-7xl py-20  justify-center flex-col bg-transparent items-center`}>
+        <div data-aos="fade-up" className={`${isReversed ? 'lg:flex-row-reverse' : 'lg:flex-row'} flex lg:justify-around z-10 max-w-7xl w-full py-20  justify-center flex-col bg-transparent items-center`}>
             <Blob heading={heading} text={text}/>
             <ServiceImg alt={alt} src={src}  reversedShadow={isReversed}/>
         </div>

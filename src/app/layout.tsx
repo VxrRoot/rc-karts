@@ -4,6 +4,7 @@ import Loader from "@/ui/Loader/Loader";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { AOSInit } from './aos'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,6 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <AOSInit />
       <body className={inter.className}>
         <Header />
         {children}

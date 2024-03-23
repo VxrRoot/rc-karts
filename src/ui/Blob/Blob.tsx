@@ -13,7 +13,7 @@ export const Blob: FC<IBlob> = ({ heading, text }) => {
     return (
         <div className={`${styles.blob}`}>
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" >
-                <path>
+                <path fill="url(#Gradient1)">
                     <animate repeatCount="indefinite" dur='16s' attributeName="d"
                         values="
 M696.194 45.0455C839.4 105.861 1012.59 394.455 996.992 546.346C981.397 698.236 751.009 925.232 602.621 956.389C454.233 987.547 184.14 862.447 106.663 733.291C29.1848 604.134 39.4994 296.158 137.755 181.451C236.01 66.7431 552.988 -15.7704 696.194 45.0455Z;
@@ -69,6 +69,12 @@ M676.863 89.872C817.606 150.424 995.446 403.219 982.477 544.992C969.508 686.765 
 M696.194 45.0455C839.4 105.861 1012.59 394.455 996.992 546.346C981.397 698.236 751.009 925.232 602.621 956.389C454.233 987.547 184.14 862.447 106.663 733.291C29.1848 604.134 39.4994 296.158 137.755 181.451C236.01 66.7431 552.988 -15.7704 696.194 45.0455Z
 " />
                 </path>
+                <defs>
+                    <linearGradient id="Gradient1">
+                        <stop offset="0%" stopColor="var(--primaryc)" />
+                        <stop offset="100%" stopColor="#6CCD6C" />
+                    </linearGradient>
+                </defs>
             </svg>
             <div className={`${styles.content} ${baloo.className}  absolute -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 flex flex-col items-center justify-center`}>
                 <h3 className={`text-white text-3xl mb-3 text-left`}>{heading}</h3>

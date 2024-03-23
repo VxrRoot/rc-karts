@@ -16,7 +16,7 @@ const ServiceImage: FC<IServiceImage>  = ({ src, alt,reversedShadow =false}) => 
       alt={alt}
       src={src}
       priority
-      className={`${reversedShadow ? styles.reversed : styles.image} w-screen md:w-[35rem] h-auto rounded-3xl`}
+      className={`${reversedShadow ? styles.reversed : styles.image} w-screen md:w-[30rem] h-auto rounded-3xl`}
     />
   );
 };
