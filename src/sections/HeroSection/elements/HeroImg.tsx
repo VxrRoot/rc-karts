@@ -8,7 +8,7 @@ const HeroImg = () => {
       alt="hero img"
       src={heroImg}
       priority
-      className="h-[34rem] w-full z-30 lg:h-auto object-cover object-center brightness-[.4]"
+      className="h-[89dvh] w-full z-30 object-cover object-center brightness-[.4]"
     />
   );
 };

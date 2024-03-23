@@ -7,9 +7,9 @@ const baloo = Baloo_Chettan_2({ subsets: ["latin"], weight: ["600", "800"] });
 
 const HeroSection = () => {
   return (
-    <section className="relative h-[34rem] z-20 lg:h-auto">
+    <section className="relative h-[89dvh] z-20">
       <HeroImg />
-      <div className=" flex-col absolute inset-0 flex items-center justify-center px-8">
+      <div className=" h-[89dvh] flex-col absolute inset-0 flex items-center justify-center px-8">
         <h1
           className={`text-4xl text-center lg:text-7xl font-extrabold lg:tracking-widest text-white ${baloo.className} uppercase tracking-wide`}
         >
