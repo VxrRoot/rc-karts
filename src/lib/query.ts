@@ -9,3 +9,15 @@ export async function getHomePageImages() {
 
   return data;
 }
+
+export async function getAttraction() {
+  const query = `*[_type == 'attraction'] {
+      name,
+      description,
+      image
+    }`;
+
+  const data = await client.fetch(query);
+
+  return data;
+}

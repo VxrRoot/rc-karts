@@ -10,8 +10,10 @@ export default function Home() {
     <main className="">
       <HeroSection />
       <AboutSection />
+      {/* @ts-expect-error Async Server Component */}
       <GallerySection />
       <ServiceSection />
+      {/* @ts-expect-error Async Server Component */}
       <AttractionSection />
       <ContactSection />
     </main>
