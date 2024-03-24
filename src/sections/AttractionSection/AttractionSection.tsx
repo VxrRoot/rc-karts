@@ -52,11 +52,9 @@ const AttractionSection = () => {
           perPage: 1,
           perMove: 1,
           arrows: false,
-          focus: 0,
           omitEnd: true,
           pagination: true,
           isNavigation: true,
-          drag: "free",
           breakpoints: {
             1500: { perPage: 4.5, perMove: 4 },
             1200: { perPage: 3.5, perMove: 3, padding: { left: 150 } },
