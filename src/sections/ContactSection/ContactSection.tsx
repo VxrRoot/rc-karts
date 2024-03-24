@@ -12,7 +12,7 @@ const baloo = Baloo_Chettan_2({ subsets: ["latin"], weight: ["600", "800"] });
 const ContactSection = () => {
   return (
     <section
-      className={`flex px-2 md:px-8 flex-col items-center relative bg-cover bg-center z-30 bg-[url('../assets/contact-background.svg')] w-full min-h-[1000px] lg:min-h-[880px] ${baloo.className} ${styles.contact}`}
+      className={`flex px-4 md:px-8 flex-col items-center relative bg-cover bg-center z-30 bg-[url('../assets/contact-background.svg')] w-full min-h-[1000px] lg:min-h-[880px] ${baloo.className} ${styles.contact}`}
     >
       <h3 className="text-secondary text-4xl mt-32 drop-shadow">
         Skontaktuj się z nami
@@ -20,14 +20,14 @@ const ContactSection = () => {
       <div
         className={`flex lg:justify-around z-10 py-20 w-full   justify-center flex-row flex-wrap bg-transparent items-center max-w-7xl`}
       >
-        <div className="lg:w-[40rem]">
-          <div className="rounded-3xl bg-[#f2f2f2]  shadow-xl p-8 md:p-10">
+        <div className=" w-full md:max-w-[40rem]">
+          <div className="rounded-3xl bg-[#f2f2f2]  shadow-xl p-4 py-10 md:p-10">
             <form
               action=""
               className="flex flex-col gap-2 justify-center h-full"
             >
-              <h4 className="text-[#FF3E27] text-3xl mb-4">
-                Masz pytanie? Napisz do nas
+              <h4 className="text-[#FF3E27] text-3xl mb-4 text-center md:text-left">
+                Masz pytanie? <br className="md:hidden" /> Napisz do nas
               </h4>
               <Input
                 name="email"
@@ -44,7 +44,7 @@ const ContactSection = () => {
                 placeholder="Twoja wiadomość"
                 name="message"
               />
-              <label className="flex items-center gap-2">
+              <label className="flex items-center gap-2 mb-5">
                 <input
                   type="checkbox"
                   className="accent-[#FF3061] w-4 h-4 rounded-lg"

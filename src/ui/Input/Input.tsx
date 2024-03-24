@@ -18,7 +18,7 @@ export const Input: FC<IInput> = ({ placeholder, name, label }) => {
                 type="text"
                 name={name}
                 placeholder={placeholder}
-                className="input bg-transparent outline-none border-none pl-6 pr-10 py-2 mb-2 w-full font-sans rounded-full overflow-hidden bg-white shadow-xl md:w-1/2"
+                className="input bg-transparent outline-none border-none pl-6 pr-10 py-2 mb-2 w-full font-sans rounded-2xl overflow-hidden bg-white shadow-xl md:w-1/2"
             />
         </div>
     );
