@@ -6,10 +6,25 @@ import React from "react";
 import Link from "next/link";
 import styles from "./ContactSection.module.scss";
 import { PhoneIcon } from "lucide-react";
+import { getMainData } from "@/lib/query";
 
 const baloo = Baloo_Chettan_2({ subsets: ["latin"], weight: ["600", "800"] });
 
-const ContactSection = () => {
+const ContactSection = async () => {
+  const data = await getMainData();
+
+  let weekOpen;
+  let saturdayOpen;
+  let sundayOpen;
+
+  data[0].openHours.map((item: any) => {
+    if (item.weekDays === "Sobota") saturdayOpen = item.open;
+
+    if (item.weekDays === "Niedziela") sundayOpen = item.open;
+
+    if (item.weekDays === "Pn-Pt") weekOpen = item.open;
+  });
+
   return (
     <section
       className={`flex px-2 md:px-8 flex-col items-center relative bg-cover bg-center z-30 bg-[url('../assets/contact-background.svg')] w-full min-h-[1000px] lg:min-h-[880px] ${baloo.className} ${styles.contact}`}
@@ -65,7 +80,7 @@ const ContactSection = () => {
                 href="facebook"
               >
                 {" "}
-                <FacebookIcon /> Facebook
+                <EmailIcon /> {data[0].email}
               </Link>
             </div>
             <div className="flex  items-center">
@@ -74,7 +89,7 @@ const ContactSection = () => {
                 href="facebook"
               >
                 {" "}
-                <InstaIcon /> Instagram
+                <PhoneIcon /> {data[0].phone}
               </Link>
             </div>
             <div className="flex  items-center">
@@ -83,26 +98,29 @@ const ContactSection = () => {
                 href="facebook"
               >
                 {" "}
-                <EmailIcon /> rginalski@onet.pl{" "}
+                <LocalIcon /> {data[0].address}
               </Link>
             </div>
-            <div className="flex  items-center">
-              <Link
-                className="flex flex-row justify-center items-center gap-6 drop-shadow-lg"
-                href="facebook"
-              >
-                {" "}
-                <PhoneIcon /> +48 123 123 123
-              </Link>
-            </div>
-            <div className="flex  items-center">
-              <Link
-                className="flex flex-row justify-center items-center gap-6 drop-shadow-lg"
-                href="facebook"
-              >
-                {" "}
-                <LocalIcon /> Jedlicze 12
-              </Link>
+            <div className="flex mt-10 flex-col">
+              <div className="grid grid-cols-2">
+                <span>PN - PT</span>
+                <span>{weekOpen}</span>
+              </div>
+              <div className="grid grid-cols-2">
+                <span>Sobota</span>
+                <span>{saturdayOpen}</span>
+              </div>
+              <div className="grid grid-cols-2">
+                <span>Niedziela</span>
+                <span>{sundayOpen}</span>
+              </div>
+              <div className="mt-10">
+                <p className="max-w-80 text-base">
+                  W przypadku złych warunków atmosferycznych atrakcje mogą być
+                  nie czynne. Prosimy śledzić naszego facebooka oraz dzownić w
+                  razie wątpliwości
+                </p>
+              </div>
             </div>
           </div>
         </div>

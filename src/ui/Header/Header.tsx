@@ -56,26 +56,26 @@ export default function Header() {
         <div className="hidden lg:flex lg:items-center lg:gap-x-12 lg:flex-1 lg:justify-end">
           <Link
             href={links.homePage}
-            className={`text-md tracking-wider whitespace-nowrap font-semibold leading-6 text-white hover:text-gray-950 transition-all `}
+            className={`text-md tracking-wider whitespace-nowrap font-semibold leading-6 text-white hover:text-gray-200 transition-all `}
           >
             Strona główna
           </Link>
 
           <Link
             href={links.terms}
-            className={`text-md tracking-wider leading-6 text-white font-semibold hover:text-gray-950 transition-all `}
+            className={`text-md tracking-wider leading-6 text-white font-semibold hover:text-gray-200 transition-all `}
           >
             Regulamin
           </Link>
           <Link
             href={links.attractions}
-            className={`text-md tracking-wider leading-6 text-white font-semibold hover:text-gray-950 transition-all `}
+            className={`text-md tracking-wider leading-6 text-white font-semibold hover:text-gray-200 transition-all `}
           >
             Atrakcje
           </Link>
           <Link
             href={links.pricelist}
-            className={`text-md tracking-wider leading-6 text-white font-semibold hover:text-gray-950 transition-all `}
+            className={`text-md tracking-wider leading-6 text-white font-semibold hover:text-gray-200 transition-all `}
           >
             Cennik
           </Link>
@@ -109,25 +109,25 @@ export default function Header() {
             <div className="space-y-2 py-6 flex flex-col items-center">
               <Link
                 href={links.homePage}
-                className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7 text-white hover:text-gray-950"
+                className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7 text-white hover:text-gray-200"
               >
                 Strona główna
               </Link>
               <Link
                 href={links.terms}
-                className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7 text-white hover:text-gray-950"
+                className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7 text-white hover:text-gray-200"
               >
                 Regulamin
               </Link>
               <Link
                 href={links.attractions}
-                className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7 text-white hover:text-gray-950"
+                className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7 text-white hover:text-gray-200"
               >
                 Atrakcje
               </Link>
               <Link
                 href={links.pricelist}
-                className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7 text-white hover:text-gray-950"
+                className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7 text-white hover:text-gray-200"
               >
                 Cennik
               </Link>

@@ -1,14 +1,20 @@
-import React from "react";
+import { FC } from "react";
 import Image from "next/image";
 import heroImg from "../../../assets/hero.png";
 
-const HeroImg = () => {
+interface IHeroImg {
+  bigImg?: boolean;
+}
+
+const HeroImg: FC<IHeroImg> = ({ bigImg }) => {
   return (
     <Image
       alt="hero img"
       src={heroImg}
       priority
-      className="h-[89dvh] w-full z-30 object-cover object-center brightness-[.4]"
+      className={`${
+        bigImg ? "h-[89dvh]" : "h-[60dvh]"
+      } w-full z-30 object-cover object-center brightness-[.4]`}
     />
   );
 };

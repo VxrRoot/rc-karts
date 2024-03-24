@@ -3,8 +3,7 @@ export const links = {
   terms: "#",
   attractions: "#",
   pricelist: "#",
+  gallery: "/galeria",
 };
 
 export const siteUrl = "";
-
-

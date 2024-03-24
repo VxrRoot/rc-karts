@@ -10,6 +10,30 @@ export async function getHomePageImages() {
   return data;
 }
 
+export async function getGalleryImages() {
+  const query = `*[_type == 'media.tag' && name.current == 'Wszystko'] {
+            'images': *[_type == 'sanity.imageAsset' && references(^._id)]{originalFilename, url, altText}
+            }`;
+
+  const data = await client.fetch(query);
+
+  return data;
+}
+
+export async function getMainData() {
+  const query = `*[_type == 'PageContent'] {
+      name,
+      phone,
+      email,
+      openHours,
+      address
+  }`;
+
+  const data = await client.fetch(query);
+
+  return data;
+}
+
 export async function getAttraction() {
   const query = `*[_type == 'attraction'] {
       name,
@@ -18,8 +42,6 @@ export async function getAttraction() {
     }`;
 
   const data = await client.fetch(query);
-
-  console.log(data);
 
   return data;
 }

@@ -20,6 +20,11 @@ export default {
       title: 'AdresEmail',
     },
     {
+      name: 'address',
+      type: 'string',
+      title: 'Adres',
+    },
+    {
       name: 'openHours',
       type: 'array',
       title: 'GodzinyOtwarcia',

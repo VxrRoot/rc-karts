@@ -1,6 +1,8 @@
+import { links } from "@/constants";
 import { getHomePageImages } from "@/lib/query";
 import { Baloo_Chettan_2 } from "next/font/google";
 import Image from "next/image";
+import Link from "next/link";
 import "./GallerySection.scss";
 
 const baloo = Baloo_Chettan_2({ subsets: ["latin"], weight: ["600", "800"] });
@@ -41,10 +43,13 @@ async function GallerySection() {
           ))}
         </ul>
       </div>
-      <div className="w-full flex justify-center">
-        <button className="bg-primaryc mt-10 py-4 px-10 rounded-2xl text-white  ">
+      <div className="w-full flex z-50 relative justify-center">
+        <Link
+          href={links.gallery}
+          className="bg-primaryc mt-10 py-4 px-10 rounded-2xl text-white cursor-pointer"
+        >
           Zobacz wszystkie zdjęcia
-        </button>
+        </Link>
       </div>
     </section>
   );

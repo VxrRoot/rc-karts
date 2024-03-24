@@ -1,4 +1,3 @@
-import { getAttraction } from "@/lib/query";
 import AboutSection from "@/sections/AboutSection/AboutSection";
 import AttractionSection from "@/sections/AttractionSection/AttractionSection";
 import ContactSection from "@/sections/ContactSection/ContactSection";
@@ -11,7 +10,7 @@ export const revalidate = 0;
 export default async function Home() {
   return (
     <main className="">
-      <HeroSection />
+      <HeroSection showButtons={true} text="GOKARTY I DMUCHAŃCE" />
       <AboutSection />
       <GallerySection />
       <ServiceSection />
