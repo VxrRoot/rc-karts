@@ -10,8 +10,10 @@ export default function Home() {
     <main className="">
       <HeroSection />
       <AboutSection />
+      {/* @ts-expect-error */}
       <GallerySection />
       <ServiceSection />
+      {/* @ts-expect-error */}
       <AttractionSection />
       <ContactSection />
     </main>

@@ -37,14 +37,14 @@ const AttractionSlider: FC<IAttractionSlider> = ({ elements }) => {
       className="pt-0"
     >
       {elements.map((item, idx) => (
-        <SplideSlide key={idx} className="py-10 text-white">
+        <SplideSlide key={idx} className="py-10 h-full text-white">
           <div className={`bg-primaryc shadow-xl rounded-3xl p-10 mx-4`}>
             <Image
               alt={item.name}
               width={400}
               height={300}
               src={item.image ? urlFor(item.image).url() : testImg}
-              className="rounded-lg"
+              className="rounded-lg h-44 w-full object-cover"
             />
             <h4 className="pt-8 pb-6 font-semibold text-2xl">{item.name}</h4>
             <p className="font-medium">{item.description}</p>
