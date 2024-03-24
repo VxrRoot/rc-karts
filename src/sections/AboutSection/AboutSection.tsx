@@ -15,17 +15,12 @@ const AboutSection = () => {
         src={goCartImg}
         className="-mt-6 lg:-mt-18 w-48 h-auto"
       />
-      <div className="text-white mt-28 flex flex-col items-center">
+      <div className="text-white mt-28 flex flex-col items-center ">
         <h2 className={`${baloo.className} text-center text-4xl font-bold`}>
-          SAMOCHODZIKI RC KARTS
+          Gokarty RC KARTS
         </h2>
-        <p className="max-w-[600px] mt-10">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industrys standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged
+        <p className={`${baloo.className} max-w-[600px] mt-10 text-xl `}>
+          Nasza główna atrakcja czyli przyjazne dla Dzieci Modele RC Karts: Wybierz spośród naszych kolorowych i bezpiecznych gokartów RC, zaprojektowanych specjalnie z myślą o młodszych użytkownikach. Nasze modele są łatwe w obsłudze, co czyni je idealnymi dla dzieci, które dopiero zaczynają swoją przygodę z RC. Z naszymi gokartami Twoje dziecko odkryje radość z jazdy i rywalizacji, rozwijając przy tym swoje umiejętności manualne i koordynację.
         </p>
       </div>
     </section>
