@@ -3,11 +3,9 @@ import { Baloo_Chettan_2 } from "next/font/google";
 import Image from "next/image";
 import "./GallerySection.scss";
 
-export const revalidate = 30;
-
 const baloo = Baloo_Chettan_2({ subsets: ["latin"], weight: ["600", "800"] });
 
-const GallerySection = async () => {
+async function GallerySection() {
   const data = await getHomePageImages();
 
   return (
@@ -50,6 +48,6 @@ const GallerySection = async () => {
       </div>
     </section>
   );
-};
+}
 
 export default GallerySection;

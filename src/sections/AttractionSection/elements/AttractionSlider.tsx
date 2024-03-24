@@ -13,8 +13,6 @@ interface IAttractionSlider {
 }
 
 const AttractionSlider: FC<IAttractionSlider> = ({ elements }) => {
-  console.log(elements);
-
   return (
     <Splide
       options={{
@@ -37,8 +35,8 @@ const AttractionSlider: FC<IAttractionSlider> = ({ elements }) => {
       className="pt-0"
     >
       {elements.map((item, idx) => (
-        <SplideSlide key={idx} className="py-10 h-full text-white">
-          <div className={`bg-primaryc shadow-xl rounded-3xl p-10 mx-4`}>
+        <SplideSlide key={idx} className="py-10 h-auto self-stretch text-white">
+          <div className={`bg-primaryc shadow-xl rounded-3xl h-full p-10 mx-3`}>
             <Image
               alt={item.name}
               width={400}
