@@ -1,36 +1,14 @@
-// "use client";
-
+import { getHomePageImages } from "@/lib/query";
 import { Baloo_Chettan_2 } from "next/font/google";
-import React, { useEffect } from "react";
 import Image from "next/image";
 import "./GallerySection.scss";
-import photo1 from "@/assets/photo1.jpg";
-import photo2 from "@/assets/photo2.jpg";
-import photo3 from "@/assets/photo3.jpg";
-import photo4 from "@/assets/photo4.jpg";
-import photo5 from "@/assets/photo5.jpg";
-import { getHomePageImages } from "@/lib/query";
 
 export const revalidate = 30;
 
 const baloo = Baloo_Chettan_2({ subsets: ["latin"], weight: ["600", "800"] });
 
-const images = [photo1, photo2, photo3, photo4, photo5];
-
 const GallerySection = async () => {
   const data = await getHomePageImages();
-
-  //   useEffect(() => {
-  //     const root = document.documentElement;
-  //     const marqueeContent = document.querySelector("ul.marquee-content");
-  //     if (marqueeContent)
-  //       root.style.setProperty(
-  //         "--marquee-elements",
-  //         marqueeContent.children.length.toString()
-  //       );
-  //   });
-
-  //   console.log(data[0].images);
 
   return (
     <section className={`py-32 overflow-hidden`}>
