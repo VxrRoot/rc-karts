@@ -41,9 +41,9 @@ const ContactSection = async () => {
               action=""
               className="flex flex-col gap-2 justify-center h-full"
             >
-              <h4 className="text-[#FF3E27] text-3xl mb-4">
+              <h3 className="text-[#FF3E27] text-3xl mb-4">
                 Masz pytanie? Napisz do nas
-              </h4>
+              </h3>
               <Input
                 name="email"
                 label="Twój email"

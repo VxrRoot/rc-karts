@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { FC, useState } from "react";
-import { X, ArrowLeft, ArrowRight } from "lucide-react";
+import { X, ChevronRight, ChevronLeft } from "lucide-react";
 
 interface IGallerySection {
   images: {
@@ -27,13 +27,13 @@ const GallerySection: FC<IGallerySection> = ({ images }) => {
       <div
         className={`${
           showModal !== null ? "flex opacty-1" : "hidden opacity-0"
-        } fixed top-0 left-0 bottom-0 right-0 z-50 bg-black/75 transition-opacity duration-300`}
+        } fixed top-0 left-0 bottom-0 right-0 z-50 bg-black/90 transition-opacity duration-300`}
       >
         <span
-          className="text-white absolute right-6 z-20 top-6 cursor-pointer"
+          className="text-white absolute right-2 z-20 top-2 cursor-pointer"
           onClick={() => setShowModal(null)}
         >
-          <X className="h-4 w-4" />
+          <X size={36} />
         </span>
         <div className="w-full px-8 lg:px-14 h-full absolute flex items-center justify-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
           {typeof showModal === "number" ? (
@@ -42,8 +42,13 @@ const GallerySection: FC<IGallerySection> = ({ images }) => {
               alt="sss"
               width={800}
               height={800}
-              className="max-h-full w-auto py-2 cursor-pointer object-cover transition-opacity opacity-0 duration-1000"
-              onLoadingComplete={(image) => image.classList.remove("opacity-0")}
+              // className="max-h-full w-auto py-2 cursor-pointer object-cover transition-opacity opacity-0 duration-1000"
+              // onLoadingComplete={(image) => image.classList.remove("opacity-0")}
+              className="max-h-full w-auto py-2 cursor-pointer object-cover scale-110 blur-2xl grayscale duration-700 ease-in-out group-hover:opacity-75"
+              onLoadingComplete={(image) => {
+                image.classList.remove("scale-110", "blur-2xl", "grayscale");
+                image.classList.add("blur-0", "grayscale-0");
+              }}
             />
           ) : (
             "err"
@@ -51,15 +56,21 @@ const GallerySection: FC<IGallerySection> = ({ images }) => {
         </div>
         <span
           onClick={() => handelChangePhoto("next")}
-          className="text-white absolute right-2 top-1/2 cursor-pointer"
+          className={`${
+            showModal !== images.length - 1
+              ? "text-white cursor-pointer"
+              : "text-gray-400"
+          } absolute right-0 top-1/2 text-xl `}
         >
-          <ArrowRight />
+          <ChevronRight size={36} />
         </span>
         <span
           onClick={() => handelChangePhoto("prev")}
-          className="text-white absolute left-2 top-1/2 cursor-pointer"
+          className={` ${
+            showModal !== 0 ? "text-white cursor-pointer" : "text-gray-400"
+          }  absolute left-0 top-1/2 `}
         >
-          <ArrowLeft />
+          <ChevronLeft size={36} />
         </span>
       </div>
       {images.map((img: any, idx: number) => {
@@ -68,8 +79,13 @@ const GallerySection: FC<IGallerySection> = ({ images }) => {
           <Image
             key={idx}
             onClick={() => setShowModal(idx)}
-            className="w-full h-auto py-2 cursor-pointer transition-opacity opacity-0 duration-1000"
-            onLoadingComplete={(image) => image.classList.remove("opacity-0")}
+            // className="w-full h-auto py-2 cursor-pointer transition-opacity opacity-0 duration-1000"
+            // onLoadingComplete={(image) => image.classList.remove("opacity-0")}
+            className="max-h-full w-auto py-2 cursor-pointer object-cover scale-110 blur-2xl grayscale duration-700 ease-in-out group-hover:opacity-75"
+            onLoadingComplete={(image) => {
+              image.classList.remove("scale-110", "blur-2xl", "grayscale");
+              image.classList.add("blur-0", "grayscale-0");
+            }}
             width={500}
             height={500}
             alt={img.alt ? img.alt : "zdjecie atrakcji"}
