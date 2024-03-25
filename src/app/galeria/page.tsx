@@ -1,23 +1,16 @@
 import { getGalleryImages } from "@/lib/query";
+import GallerySection from "@/sections/GallerySection/GallerySection";
 import HeroSection from "@/sections/HeroSection/HeroSection";
-import ImageGallery from "./ImageGallery";
 
 export const revalidate = 0;
 
 const page = async () => {
-  const imageData = await getGalleryImages();
+  const imagesData = await getGalleryImages();
 
   return (
     <main>
       <HeroSection text="Galeria" />
-      {/* <Dialog open={isOpen}> */}
-
-      <section className="md:columns-2 px-4 lg:columns-4 max-w-7xl mx-auto">
-        {imageData[0].images.map((img: any, idx: number) => {
-          return <ImageGallery key={idx} img={img} />;
-        })}
-      </section>
-      {/* </Dialog> */}
+      <GallerySection images={imagesData[0].images} />
     </main>
   );
 };
