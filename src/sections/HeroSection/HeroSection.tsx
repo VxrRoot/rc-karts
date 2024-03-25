@@ -13,12 +13,12 @@ interface IHeroSection {
 const HeroSection: FC<IHeroSection> = ({ showButtons = false, text }) => {
   return (
     <section
-      className={`relative ${showButtons ? "h-[89dvh]" : "h-[60dvh]"}  z-20`}
+      className={`relative ${showButtons ? "h-[89vh]" : "h-[60vh]"}  z-20`}
     >
       <HeroImg bigImg={showButtons} />
       <div
         className={` ${
-          showButtons ? "h-[89dvh]" : "h-[60dvh]"
+          showButtons ? "h-[89vh]" : "h-[60vh]"
         } flex-col absolute inset-0 flex items-center justify-center px-8`}
       >
         <h1
