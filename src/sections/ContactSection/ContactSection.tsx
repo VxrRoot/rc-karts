@@ -1,12 +1,11 @@
-import { EmailIcon, FacebookIcon, InstaIcon, LocalIcon } from "@/assets/icons";
+import { EmailIcon, LocalIcon } from "@/assets/icons";
+import { getMainData } from "@/lib/query";
 import { Input } from "@/ui/Input/Input";
 import { TextArea } from "@/ui/TextArea/TextArea";
+import { PhoneIcon } from "lucide-react";
 import { Baloo_Chettan_2 } from "next/font/google";
-import React from "react";
 import Link from "next/link";
 import styles from "./ContactSection.module.scss";
-import { PhoneIcon } from "lucide-react";
-import { getMainData } from "@/lib/query";
 
 const baloo = Baloo_Chettan_2({ subsets: ["latin"], weight: ["600", "800"] });
 
@@ -27,6 +26,7 @@ const ContactSection = async () => {
 
   return (
     <section
+      id="contact"
       className={`flex px-2 md:px-8 flex-col items-center relative bg-cover bg-center z-30 bg-[url('../assets/contact-background.svg')] w-full min-h-[1000px] lg:min-h-[880px] ${baloo.className} ${styles.contact}`}
     >
       <h3 className="text-secondary text-4xl mt-32 drop-shadow">

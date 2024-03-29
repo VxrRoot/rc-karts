@@ -10,14 +10,21 @@ const baloo = Baloo_Chettan_2({ subsets: ["latin"], weight: ["600", "800"] });
 interface IHeroSection {
   text: string;
   showButtons?: boolean;
+  showImg?: boolean;
 }
 
-const HeroSection: FC<IHeroSection> = ({ showButtons = false, text }) => {
+const HeroSection: FC<IHeroSection> = ({
+  showButtons = false,
+  text,
+  showImg = true,
+}) => {
   return (
     <section
-      className={`relative ${showButtons ? "h-[89vh]" : "h-[60vh]"}  z-20`}
+      className={`relative ${
+        showButtons ? "h-[89vh]" : "h-[60vh]"
+      }  z-20 bg-cover bg-bottom -mt-[30px] lg:mt-0 bg-[url('../assets/contact-background.svg')]`}
     >
-      <HeroImg bigImg={showButtons} />
+      {showImg ? <HeroImg bigImg={showButtons} /> : ""}
       <div
         className={` ${
           showButtons ? "h-[89vh]" : "h-[60vh]"

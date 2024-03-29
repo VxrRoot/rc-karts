@@ -43,7 +43,7 @@ async function GallerySection() {
           ))}
         </ul>
       </div>
-      <div className="w-full flex z-50 relative justify-center">
+      <div className="w-full flex z-30 relative justify-center">
         <Link
           href={links.gallery}
           className="bg-primaryc mt-10 py-4 px-10 rounded-2xl text-white cursor-pointer"

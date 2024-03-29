@@ -9,7 +9,7 @@ const page = async () => {
 
   return (
     <main>
-      <HeroSection text="Galeria" />
+      <HeroSection text="Galeria" showImg={false} />
       <GallerySection images={imagesData[0].images} />
     </main>
   );

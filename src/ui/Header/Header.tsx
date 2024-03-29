@@ -11,16 +11,17 @@ import logo from "@/assets/logo-small.png";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [headerColor, setHeaderColor] = useState(false);
   const router = useRouter();
   const pathname = usePathname();
 
-  const scrollToContact = () => {
-    const contactSection = document.getElementById("contact");
+  const scrollToSection = (sectionId: string) => {
+    const contactSection = document.getElementById(sectionId);
 
     if (mobileMenuOpen) setMobileMenuOpen(false);
 
     if (pathname !== links.homePage) {
-      router.push(`${links.homePage}#contact`);
+      router.push(`${links.homePage}#${sectionId}`);
     } else {
       if (contactSection) {
         contactSection.scrollIntoView({ behavior: "smooth" });
@@ -35,12 +36,30 @@ export default function Header() {
       : (document.body.style.overflowY = "auto");
   };
 
+  // const changeHeader = () => {
+  //   if (window.scrollY >= 80) {
+  //     setHeaderColor(true);
+  //   } else {
+  //     setHeaderColor(false);
+  //   }
+  // };
+
+  // useEffect(() => {
+  //   console.log("selo");
+
+  //   window.addEventListener("scroll", changeHeader);
+
+  //   return window.removeEventListener("scroll", changeHeader);
+  // }, []);
+
+  // window.addEventListener("scroll", changeHeader);
+
   useEffect(() => {
     setMobileMenuOpen(false);
   }, [pathname]);
 
   return (
-    <header className={"h-20 absolute w-full z-40"}>
+    <header className={`h-20  absolute transition-all top-0 w-full z-40`}>
       <nav
         className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8 lg:py-0 h-full"
         aria-label="Global"
@@ -80,7 +99,7 @@ export default function Header() {
             Cennik
           </Link>
           <span
-            onClick={scrollToContact}
+            onClick={() => scrollToSection("contact")}
             className=" text-md tracking-wider whitespace-nowrap font-semibold leading-6 text-white bg-secondaryc py-2 px-4 rounded-full transition-all cursor-pointer"
           >
             Skontaktuj się
@@ -134,7 +153,7 @@ export default function Header() {
             </div>
             <div className="py-6 flex items-center justify-center">
               <span
-                onClick={scrollToContact}
+                onClick={() => scrollToSection("contact")}
                 className="text-2xl whitespace-nowrap font-semibold leading-6 text-white  py-2 px-4 rounded-2xl transition-all cursor-pointer"
               >
                 Skontaktuj się

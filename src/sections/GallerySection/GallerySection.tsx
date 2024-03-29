@@ -23,7 +23,7 @@ const GallerySection: FC<IGallerySection> = ({ images }) => {
   };
 
   return (
-    <section className="md:columns-2 px-4 lg:columns-4 max-w-7xl mx-auto">
+    <section className="md:columns-2 px-4 lg:columns-4 mt-10 lg:mt-16 max-w-7xl mx-auto">
       <div
         className={`${
           showModal !== null ? "flex opacty-1" : "hidden opacity-0"
@@ -44,9 +44,9 @@ const GallerySection: FC<IGallerySection> = ({ images }) => {
               height={800}
               // className="max-h-full w-auto py-2 cursor-pointer object-cover transition-opacity opacity-0 duration-1000"
               // onLoadingComplete={(image) => image.classList.remove("opacity-0")}
-              className="max-h-full w-auto py-2 cursor-pointer object-cover scale-110 blur-2xl grayscale duration-700 ease-in-out group-hover:opacity-75"
+              className="max-h-full w-auto py-2 cursor-pointer object-cover scale-110 blur-lg grayscale duration-500 ease-in-out group-hover:opacity-75"
               onLoadingComplete={(image) => {
-                image.classList.remove("scale-110", "blur-2xl", "grayscale");
+                image.classList.remove("scale-110", "blur-lg", "grayscale");
                 image.classList.add("blur-0", "grayscale-0");
               }}
             />
@@ -81,9 +81,9 @@ const GallerySection: FC<IGallerySection> = ({ images }) => {
             onClick={() => setShowModal(idx)}
             // className="w-full h-auto py-2 cursor-pointer transition-opacity opacity-0 duration-1000"
             // onLoadingComplete={(image) => image.classList.remove("opacity-0")}
-            className="max-h-full w-auto py-2 cursor-pointer object-cover scale-110 blur-2xl grayscale duration-700 ease-in-out group-hover:opacity-75"
+            className="max-h-full w-auto py-2 cursor-pointer object-cover scale-110 blur-lg grayscale duration-500 ease-in-out group-hover:opacity-75"
             onLoadingComplete={(image) => {
-              image.classList.remove("scale-110", "blur-2xl", "grayscale");
+              image.classList.remove("scale-110", "blur-lg", "grayscale");
               image.classList.add("blur-0", "grayscale-0");
             }}
             width={500}
