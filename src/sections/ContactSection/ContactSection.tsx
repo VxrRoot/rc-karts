@@ -1,11 +1,11 @@
 import { EmailIcon, LocalIcon } from "@/assets/icons";
 import { getMainData } from "@/lib/query";
-import { Input } from "@/ui/Input/Input";
-import { TextArea } from "@/ui/TextArea/TextArea";
+
 import { PhoneIcon } from "lucide-react";
 import { Baloo_Chettan_2 } from "next/font/google";
 import Link from "next/link";
 import styles from "./ContactSection.module.scss";
+import ContactForm from "./elements/ContactForm";
 
 const baloo = Baloo_Chettan_2({ subsets: ["latin"], weight: ["600", "800"] });
 
@@ -37,39 +37,7 @@ const ContactSection = async () => {
       >
         <div className="lg:w-[40rem]">
           <div className="rounded-3xl bg-[#f2f2f2]  shadow-xl p-8 md:p-10">
-            <form
-              action=""
-              className="flex flex-col gap-2 justify-center h-full"
-            >
-              <h3 className="text-[#FF3E27] text-3xl mb-4">
-                Masz pytanie? Napisz do nas
-              </h3>
-              <Input
-                name="email"
-                label="Twój email"
-                placeholder="Twój adres email"
-              />
-              <Input
-                name="phone "
-                label="Twój numer telefonu"
-                placeholder="Twój numer telefonu"
-              />
-              <TextArea
-                label="Twoja wiadomość"
-                placeholder="Twoja wiadomość"
-                name="message"
-              />
-              <label className="flex items-center gap-2">
-                <input
-                  type="checkbox"
-                  className="accent-[#FF3061] w-4 h-4 rounded-lg"
-                />{" "}
-                Akceptuje polityke prywatności
-              </label>
-              <button className="bg-gradient-to-r from-[#FF3E27] to-[#FF3061] py-2 px-10 rounded-2xl text-white w-full md:w-32 ">
-                Wyślij
-              </button>
-            </form>
+            <ContactForm />
           </div>
         </div>
         <div className="overflow-hidden justify-center items-center flex-col text-white text-2xl grid">
