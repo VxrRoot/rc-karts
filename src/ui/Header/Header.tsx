@@ -36,30 +36,30 @@ export default function Header() {
       : (document.body.style.overflowY = "auto");
   };
 
-  // const changeHeader = () => {
-  //   if (window.scrollY >= 80) {
-  //     setHeaderColor(true);
-  //   } else {
-  //     setHeaderColor(false);
-  //   }
-  // };
+  const changeHeader = () => {
+    if (window.scrollY >= 80) {
+      setHeaderColor(true);
+    } else {
+      setHeaderColor(false);
+    }
+  };
 
-  // useEffect(() => {
-  //   console.log("selo");
+  useEffect(() => {
+    window.addEventListener("scroll", changeHeader);
 
-  //   window.addEventListener("scroll", changeHeader);
-
-  //   return window.removeEventListener("scroll", changeHeader);
-  // }, []);
-
-  // window.addEventListener("scroll", changeHeader);
+    return window.removeEventListener("scroll", changeHeader);
+  }, []);
 
   useEffect(() => {
     setMobileMenuOpen(false);
   }, [pathname]);
 
   return (
-    <header className={`h-20  absolute transition-all top-0 w-full z-40`}>
+    <header
+      className={`h-20 ${
+        headerColor ? "fixed bg-primaryc" : "absolute"
+      } lg:absolute lg:bg-transparent transition-all top-0 w-full z-40`}
+    >
       <nav
         className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8 lg:py-0 h-full"
         aria-label="Global"

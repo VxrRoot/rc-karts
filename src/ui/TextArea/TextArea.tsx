@@ -9,6 +9,7 @@ interface ITextArea {
   label: string;
   value: string;
   onChange: (e: ChangeEvent<HTMLTextAreaElement>) => void;
+  error: boolean;
 }
 
 export const TextArea: FC<ITextArea> = ({
@@ -17,6 +18,7 @@ export const TextArea: FC<ITextArea> = ({
   label,
   onChange,
   value,
+  error,
 }) => {
   return (
     <div className="">
@@ -26,7 +28,9 @@ export const TextArea: FC<ITextArea> = ({
         onChange={onChange}
         placeholder={placeholder}
         rows={6}
-        className=" input bg-transparent outline-none border-none pl-6 pr-10 py-2 w-full font-sans rounded-3xl overflow-hidden bg-white shadow-xl w-100"
+        className={`input bg-transparent outline-none border-2  pl-6 pr-10 py-2 w-full font-sans rounded-3xl overflow-hidden bg-white shadow-xl w-100 ${
+          error ? "border-secondaryc" : ""
+        }`}
       />
     </div>
   );
