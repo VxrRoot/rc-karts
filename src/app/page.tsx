@@ -10,7 +10,7 @@ export const revalidate = 0;
 
 export default async function Home() {
   return (
-    <main className="">
+    <main className="overflow-hidden">
       <HeroSection />
       <AboutSection />
       <GallerySection />

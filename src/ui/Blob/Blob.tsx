@@ -12,9 +12,19 @@ interface IBlob {
 export const Blob: FC<IBlob> = ({ heading, text }) => {
     return (
         <div className={`${styles.blob}`}>
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" >
+            <svg className="hidden" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" >
                 <path fill="url(#Gradient1)">
                     <animate repeatCount="indefinite" dur='16s' attributeName="d"
+		keySplines="
+			0.1 0.8 0.2 1;
+			0.1 0.8 0.2 1;
+			0.1 0.8 0.2 1;
+			0.1 0.8 0.2 1;
+			0.1 0.8 0.2 1;
+			0.1 0.8 0.2 1"
+		keyTimes="
+			0;0.22;0.33;0.55;0.66;0.88;1"
+		calcMode="spline"
                         values="
 M696.194 45.0455C839.4 105.861 1012.59 394.455 996.992 546.346C981.397 698.236 751.009 925.232 602.621 956.389C454.233 987.547 184.14 862.447 106.663 733.291C29.1848 604.134 39.4994 296.158 137.755 181.451C236.01 66.7431 552.988 -15.7704 696.194 45.0455Z;
 
@@ -72,16 +82,13 @@ M696.194 45.0455C839.4 105.861 1012.59 394.455 996.992 546.346C981.397 698.236 7
                 <defs>
                     <linearGradient id="Gradient1">
                         <stop offset="0%" stopColor="var(--primaryc)" />
-                        <stop offset="100%" stopColor="#6CCD6C" />
+                        <stop offset="100%" stopColor="var(--primaryc-darker)" />
                     </linearGradient>
                 </defs>
             </svg>
             <div className={`${styles.content} ${baloo.className}  absolute -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 flex flex-col items-center justify-center`}>
-                <h3 className={`text-white text-3xl mb-3 text-left`}>{heading}</h3>
-                <p className={`text-white`}> {text}</p>
-                <a className="bg-gradient-to-r from-[#FF3E27] to-[#FF3061] text-white py-2 px-10 rounded-2xl">
-                    Cennik
-                </a>
+                <h3 className={`text-[#f2f2f2] text-3xl mb-3 text-left`}>{heading}</h3>
+                <p className={`text-[#f2f2f2]`}> {text}</p>
             </div>
         </div>
     );

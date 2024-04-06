@@ -2,7 +2,7 @@
     height: 35rem;
     width: 35rem;
     position: relative;
-    filter: drop-shadow(10px 10px 0px rgba(138, 250, 166, 0.616));
+    mix-blend-mode: darken;
     transition: 0.3s;
     transform: scale(1.1);
     &:hover {
