@@ -198,6 +198,5 @@ export async function POST(req: Request) {
     return new Response("OK");
   } catch (error) {
     console.error("Error sending email", error);
-    return new Error("Bad request");
   }
 }
