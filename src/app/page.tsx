@@ -10,7 +10,7 @@ export const revalidate = 0;
 export default async function Home() {
   return (
     <main className="">
-      <HeroSection showButtons={true} text="GOKARTY I DMUCHAŃCE" />
+      <HeroSection showButtons={true} text="PARK ZABAW DLA DZIECI" />
       <AboutSection />
       <GallerySection />
       <ServiceSection />

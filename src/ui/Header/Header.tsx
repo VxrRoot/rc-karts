@@ -31,37 +31,34 @@ export default function Header() {
 
   const handleOpenMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
-    !mobileMenuOpen
-      ? (document.body.style.overflowY = "hidden")
-      : (document.body.style.overflowY = "auto");
   };
 
-  // const changeHeader = () => {
-  //   if (window.scrollY >= 80) {
-  //     setHeaderColor(true);
-  //   } else {
-  //     setHeaderColor(false);
-  //   }
-  // };
+  const changeHeader = () => {
+    if (window.scrollY >= 80) {
+      setHeaderColor(true);
+    } else {
+      setHeaderColor(false);
+    }
+  };
 
-  // useEffect(() => {
-  //   console.log("selo");
+  useEffect(() => {
+    console.log("selo");
 
-  //   window.addEventListener("scroll", changeHeader);
+    window.addEventListener("scroll", changeHeader);
 
-  //   return window.removeEventListener("scroll", changeHeader);
-  // }, []);
+    return window.removeEventListener("scroll", changeHeader);
+  }, []);
 
-  // window.addEventListener("scroll", changeHeader);
+  window.addEventListener("scroll", changeHeader);
 
   useEffect(() => {
     setMobileMenuOpen(false);
   }, [pathname]);
 
   return (
-    <header className={`h-20  absolute transition-all top-0 w-full z-40`}>
+    <header className={`h-20 transition-all top-0 w-full z-40 fixed ${styles.header}`}>
       <nav
-        className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8 lg:py-0 h-full"
+        className={`mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8 lg:py-0 h-full ${styles.nav}` }
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
@@ -112,10 +109,10 @@ export default function Header() {
       </nav>
 
       <div
-        className={`h-full lg:hidden fixed w-full bg-gradient-to-tr from-[#FF3E27] to-[#FF3061] border-0 mx-0 ${
+        className={`h-full lg:hidden fixed w-full bg-gradient-to-tr from-[#FF3E27] to-[#FF3061] border-0 mx-0 transition-transform origin-top top-0  ${
           mobileMenuOpen
-            ? "left-0 overflow-hidden z-40 translate-x-0 top-0"
-            : " translate-x-[-100%]"
+            ? "left-0 overflow-hidden z-40 translate-x-[0%]"
+            : "translate-x-[100%] -ml-4 "
         }`}
       >
         <div className="flex items-center justify-between">

@@ -81,7 +81,7 @@ const GallerySection: FC<IGallerySection> = ({ images }) => {
             onClick={() => setShowModal(idx)}
             // className="w-full h-auto py-2 cursor-pointer transition-opacity opacity-0 duration-1000"
             // onLoadingComplete={(image) => image.classList.remove("opacity-0")}
-            className="max-h-full w-auto py-2 cursor-pointer object-cover scale-110 blur-lg grayscale duration-500 ease-in-out group-hover:opacity-75"
+            className="max-h-full w-auto py-2 cursor-pointer object-cover scale-110 blur-lg grayscale duration-500 ease-in-out group-hover:opacity-75 rounded-3xl"
             onLoadingComplete={(image) => {
               image.classList.remove("scale-110", "blur-lg", "grayscale");
               image.classList.add("blur-0", "grayscale-0");

@@ -15,14 +15,17 @@ interface IServiceRow {
     src: StaticImageData,
     alt: string,
     isReversed?: boolean,
-    className:string
+    className:string,
+    scaleImage?:boolean
 }
 
-export const ServiceRow: FC<IServiceRow> = ({ heading, text, src, alt, isReversed = false,className }) => {
+export const ServiceRow: FC<IServiceRow> = ({ heading, text, src, alt, isReversed = false,className,scaleImage = false }) => {
     return (
         <div data-aos="fade-up" className={`${isReversed ? 'lg:flex-row-reverse' : 'lg:flex-row'} flex lg:justify-around z-10 max-w-7xl w-full py-20 service justify-center flex-col bg-transparent items-center ${className}`}>
             <Blob heading={heading} text={text}/>
+            <div className={`${scaleImage ? 'scale-75':''}`}>
             <ServiceImg alt={alt} src={src}  reversedShadow={isReversed}/>
+            </div>
         </div>
     );
 };

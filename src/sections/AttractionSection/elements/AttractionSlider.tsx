@@ -40,9 +40,9 @@ const AttractionSlider: FC<IAttractionSlider> = ({ elements }) => {
             <Image
               alt={item.name}
               width={400}
-              height={300}
+              height={400}
               src={item.image ? urlFor(item.image).url() : testImg}
-              className="rounded-lg h-44 w-full object-cover"
+              className="rounded-lg h-52 w-full object-cover"
             />
             <h3 className="pt-8 pb-6 font-semibold text-2xl">{item.name}</h3>
             <p className="font-medium">{item.description}</p>
