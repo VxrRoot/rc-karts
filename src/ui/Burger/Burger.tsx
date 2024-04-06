@@ -11,6 +11,7 @@ export const Burger: FC<IBurger> = ({ open, onClick }) => {
     <button
       onClick={onClick}
       className={`${styles.burger} ${open ? styles.active : ""} `}
+      aria-label="otworz menu"
     >
       <div />
       <div />

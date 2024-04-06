@@ -1,10 +1,9 @@
 export const links = {
   homePage: "/",
-  terms: "#",
+  terms: "/regulamin",
   attractions: "#",
-  pricelist: "#",
+  pricelist: "/cennik",
+  gallery: "/galeria",
 };
 
 export const siteUrl = "";
-
-

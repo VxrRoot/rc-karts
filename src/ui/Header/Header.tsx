@@ -11,16 +11,17 @@ import logo from "@/assets/logo-small.png";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [headerColor, setHeaderColor] = useState(false);
   const router = useRouter();
   const pathname = usePathname();
 
-  const scrollToContact = () => {
-    const contactSection = document.getElementById("contact");
+  const scrollToSection = (sectionId: string) => {
+    const contactSection = document.getElementById(sectionId);
 
     if (mobileMenuOpen) setMobileMenuOpen(false);
 
     if (pathname !== links.homePage) {
-      router.push(`${links.homePage}#contact`);
+      router.push(`${links.homePage}#${sectionId}`);
     } else {
       if (contactSection) {
         contactSection.scrollIntoView({ behavior: "smooth" });
@@ -35,12 +36,30 @@ export default function Header() {
       : (document.body.style.overflowY = "auto");
   };
 
+  // const changeHeader = () => {
+  //   if (window.scrollY >= 80) {
+  //     setHeaderColor(true);
+  //   } else {
+  //     setHeaderColor(false);
+  //   }
+  // };
+
+  // useEffect(() => {
+  //   console.log("selo");
+
+  //   window.addEventListener("scroll", changeHeader);
+
+  //   return window.removeEventListener("scroll", changeHeader);
+  // }, []);
+
+  // window.addEventListener("scroll", changeHeader);
+
   useEffect(() => {
     setMobileMenuOpen(false);
   }, [pathname]);
 
   return (
-    <header className={"h-20 absolute w-full z-40"}>
+    <header className={`h-20  absolute transition-all top-0 w-full z-40`}>
       <nav
         className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8 lg:py-0 h-full"
         aria-label="Global"
@@ -56,31 +75,31 @@ export default function Header() {
         <div className="hidden lg:flex lg:items-center lg:gap-x-12 lg:flex-1 lg:justify-end">
           <Link
             href={links.homePage}
-            className={`text-md tracking-wider whitespace-nowrap font-semibold leading-6 text-white hover:text-gray-950 transition-all `}
+            className={`text-md tracking-wider whitespace-nowrap font-semibold leading-6 text-white hover:text-gray-200 transition-all `}
           >
             Strona główna
           </Link>
 
           <Link
             href={links.terms}
-            className={`text-md tracking-wider leading-6 text-white font-semibold hover:text-gray-950 transition-all `}
+            className={`text-md tracking-wider leading-6 text-white font-semibold hover:text-gray-200 transition-all `}
           >
             Regulamin
           </Link>
           <Link
             href={links.attractions}
-            className={`text-md tracking-wider leading-6 text-white font-semibold hover:text-gray-950 transition-all `}
+            className={`text-md tracking-wider leading-6 text-white font-semibold hover:text-gray-200 transition-all `}
           >
             Atrakcje
           </Link>
           <Link
             href={links.pricelist}
-            className={`text-md tracking-wider leading-6 text-white font-semibold hover:text-gray-950 transition-all `}
+            className={`text-md tracking-wider leading-6 text-white font-semibold hover:text-gray-200 transition-all `}
           >
             Cennik
           </Link>
           <span
-            onClick={scrollToContact}
+            onClick={() => scrollToSection("contact")}
             className=" text-md tracking-wider whitespace-nowrap font-semibold leading-6 text-white bg-secondaryc py-2 px-4 rounded-full transition-all cursor-pointer"
           >
             Skontaktuj się
@@ -109,32 +128,32 @@ export default function Header() {
             <div className="space-y-2 py-6 flex flex-col items-center">
               <Link
                 href={links.homePage}
-                className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7 text-white hover:text-gray-950"
+                className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7 text-white hover:text-gray-200"
               >
                 Strona główna
               </Link>
               <Link
                 href={links.terms}
-                className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7 text-white hover:text-gray-950"
+                className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7 text-white hover:text-gray-200"
               >
                 Regulamin
               </Link>
               <Link
                 href={links.attractions}
-                className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7 text-white hover:text-gray-950"
+                className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7 text-white hover:text-gray-200"
               >
                 Atrakcje
               </Link>
               <Link
                 href={links.pricelist}
-                className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7 text-white hover:text-gray-950"
+                className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7 text-white hover:text-gray-200"
               >
                 Cennik
               </Link>
             </div>
             <div className="py-6 flex items-center justify-center">
               <span
-                onClick={scrollToContact}
+                onClick={() => scrollToSection("contact")}
                 className="text-2xl whitespace-nowrap font-semibold leading-6 text-white  py-2 px-4 rounded-2xl transition-all cursor-pointer"
               >
                 Skontaktuj się
