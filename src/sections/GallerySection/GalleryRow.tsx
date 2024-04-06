@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useEffect } from "react";
 import { FC } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import "./GallerySection.scss";
+import "./GalleryHomePageSection.scss";
 import gsap from 'gsap';
 
 const baloo = Baloo_Chettan_2({ subsets: ["latin"], weight: ["600", "800"] });
