@@ -79,7 +79,6 @@ M661.261 126.052C793.827 183.884 957.422 400.325 948.344 541.809C939.267 683.293
 M676.863 89.872C817.606 150.424 995.446 403.219 982.477 544.992C969.508 686.765 741.62 911.144 599.051 940.511C456.481 969.878 203.899 847.665 127.06 721.193C50.2209 594.722 46.3839 286.902 138.018 181.682C229.652 76.462 536.12 29.3203 676.863 89.872Z;
 
 M696.194 45.0455C839.4 105.861 1012.59 394.455 996.992 546.346C981.397 698.236 751.009 925.232 602.621 956.389C454.233 987.547 184.14 862.447 106.663 733.291C29.1848 604.134 39.4994 296.158 137.755 181.451C236.01 66.7431 552.988 -15.7704 696.194 45.0455Z
-<<<<<<< HEAD
 " />
                 </path>
                 <defs>
@@ -95,30 +94,4 @@ M696.194 45.0455C839.4 105.861 1012.59 394.455 996.992 546.346C981.397 698.236 7
             </div>
         </div>
     );
-=======
-"
-          />
-        </path>
-        <defs>
-          <linearGradient id="Gradient1">
-            <stop offset="0%" stopColor="var(--primaryc)" />
-            <stop offset="100%" stopColor="#6CCD6C" />
-          </linearGradient>
-        </defs>
-      </svg>
-      <div
-        className={`${styles.content} ${baloo.className}  absolute -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 flex flex-col items-center justify-center`}
-      >
-        <h3 className={`text-white text-3xl mb-3 text-left`}>{heading}</h3>
-        <p className={`text-white`}> {text}</p>
-        <Link
-          href={links.pricelist}
-          className="bg-gradient-to-r from-[#FF3E27] to-[#FF3061] text-white py-2 px-10 rounded-2xl"
-        >
-          Cennik
-        </Link>
-      </div>
-    </div>
-  );
->>>>>>> 1653eb0e4c7144f75333de6a61f8d93bc7d5d928
 };
