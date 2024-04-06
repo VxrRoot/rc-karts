@@ -11,7 +11,7 @@ import gsap from 'gsap';
 const baloo = Baloo_Chettan_2({ subsets: ["latin"], weight: ["600", "800"] });
 
 interface IGalleryRow {
-    data: [],
+    data: any,
     className:String
 }
 
