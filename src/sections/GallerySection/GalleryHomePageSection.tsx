@@ -11,6 +11,8 @@ const baloo = Baloo_Chettan_2({ subsets: ["latin"], weight: ["600", "800"] });
 
 async function GallerySection() {
   const data = await getHomePageImages();
+
+  console.log(data)
   return (
     <section className={`py-32 overflow-hidden wrapper`}>
       <GalleryRow className='' data={data}></GalleryRow>

@@ -3,7 +3,7 @@ import { FC, useEffect } from 'react';
 import Image, { StaticImageData } from "next/image";
 // Default theme
 import "@splidejs/react-splide/css";
-import { gsap } from "gsap";
+import gsap from "gsap";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 
 
@@ -25,7 +25,7 @@ const Race = () => {
         }
         
         
-        const timeline = new gsap.timeline({repeat: -1});
+        const timeline = gsap.timeline({repeat: -1});
         
         
         timeline.set(['#red-car', '#blue-car'], {transformOrigin: '90% 50%', x: '-80', y: '-25'});
