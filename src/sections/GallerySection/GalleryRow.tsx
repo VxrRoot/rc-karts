@@ -24,12 +24,12 @@ export const GalleryRow: FC<IGalleryRow> = ({ data,className  }) => {
         gsap.utils.toArray(".gallery-row").forEach((section : any, index) => {
           const w = section.querySelector('.wrapper');
           const offset = -.5
-          const [x, xEnd] = (index % 2) ? ['100%', (w.scrollWidth) * offset] : [w.scrollWidth * offset, 0];
+          const [x, xEnd] = (index % 2) ? ['50%', (w.scrollWidth) * offset] : [w.scrollWidth * offset, 0];
           gsap.fromTo(w, {  x  }, {
             x: xEnd,
             scrollTrigger: { 
               trigger: section, 
-              scrub: 0.5 
+              scrub: 0.1 
             }
           });
         });

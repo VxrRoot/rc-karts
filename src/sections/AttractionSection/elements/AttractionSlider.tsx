@@ -7,6 +7,9 @@ import "../AttractionSection.scss";
 // Default theme
 import "@splidejs/react-splide/css";
 import { urlFor } from "@/lib/sanity";
+import { Baloo_Chettan_2 } from "next/font/google";
+
+const baloo = Baloo_Chettan_2({ subsets: ["latin"], weight: ["600", "800"] });
 
 interface IAttractionSlider {
   elements: { name: string; description: string; image: StaticImageData }[];
@@ -36,16 +39,20 @@ const AttractionSlider: FC<IAttractionSlider> = ({ elements }) => {
     >
       {elements.map((item, idx) => (
         <SplideSlide key={idx} className="py-10 h-auto self-stretch text-white">
-          <div className={`gradient-background shadow-xl rounded-3xl h-full p-10 mx-3`}>
-            <Image
-              alt={item.name}
-              width={400}
-              height={400}
-              src={item.image ? urlFor(item.image).url() : testImg}
-              className="rounded-lg h-52 w-full object-cover"
-            />
-            <h3 className="pt-8 pb-6 font-semibold text-2xl">{item.name}</h3>
-            <p className="font-medium">{item.description}</p>
+          <div
+            className={`gradient-background overflow-hidden shadow-xl rounded-3xl h-[30rem] p-4 mx-8 relative`}
+          >
+            <div className="relative w-full h-full rounded-lg overflow-auto">
+              <Image
+                alt={item.name}
+                width={400}
+                height={400}
+                src={item.image ? urlFor(item.image).url() : testImg}
+                className="rounded-lg h-full w-full object-cover "
+              />
+              <div className="gradient-overlay absolute w-full h-full left-0 top-0 "></div>
+              <h3 className={`pt-8 pb-6 font-semibold text-3xl absolute bottom-0 w-full overflow-hidden text-center ${baloo.className}`}>{item.name}</h3>
+            </div>
           </div>
         </SplideSlide>
       ))}

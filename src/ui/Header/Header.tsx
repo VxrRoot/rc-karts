@@ -41,24 +41,24 @@ export default function Header() {
     }
   };
 
-  useEffect(() => {
-    console.log("selo");
+  // useEffect(() => {
+  //   window.addEventListener("scroll", changeHeader);
 
-    window.addEventListener("scroll", changeHeader);
+  //   return window.removeEventListener("scroll", changeHeader);
+  // }, []);
 
-    return window.removeEventListener("scroll", changeHeader);
-  }, []);
-
-  window.addEventListener("scroll", changeHeader);
+  // window.addEventListener("scroll", changeHeader);
 
   useEffect(() => {
     setMobileMenuOpen(false);
   }, [pathname]);
 
   return (
-    <header className={`h-20 transition-all top-0 w-full z-40 fixed ${styles.header}`}>
+    <header
+      className={`h-20 transition-all top-0 w-full z-40 fixed ${styles.header}`}
+    >
       <nav
-        className={`mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8 lg:py-0 h-full ${styles.nav}` }
+        className={`mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8 lg:py-0 h-full ${styles.nav}`}
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
@@ -102,8 +102,20 @@ export default function Header() {
             Skontaktuj się
           </span>
           <div className={`${styles.icon_wr} flex gap-4`}>
-            <FacebookIcon />
-            <InstaIcon />
+            <Link
+              href={links.facebook}
+              target="_blank"
+              className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7 text-white hover:text-gray-200"
+            >
+              <FacebookIcon />
+            </Link>
+            <Link
+              href={links.instagram}
+              target="_blank"
+              className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7 text-white hover:text-gray-200"
+            >
+              <InstaIcon />
+            </Link>
           </div>
         </div>
       </nav>
@@ -159,8 +171,20 @@ export default function Header() {
             <div
               className={`${styles.icon_wr} items-center  justify-center flex gap-4`}
             >
-              <FacebookIcon />
-              <InstaIcon />
+              <Link
+                href={links.facebook}
+                target="_blank"
+                className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7 text-white hover:text-gray-200"
+              >
+                <FacebookIcon />
+              </Link>
+              <Link
+                href={links.instagram}
+                target="_blank"
+                className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7 text-white hover:text-gray-200"
+              >
+                <InstaIcon />
+              </Link>
             </div>
           </div>
         </div>
