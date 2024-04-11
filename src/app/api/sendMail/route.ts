@@ -197,6 +197,6 @@ export async function POST(req: Request) {
 
     return new Response("OK");
   } catch (error) {
-    console.error("Error sending email", error);
+    return new Response("Błąd wysyłania wiadomości email", { status: 500 });
   }
 }
