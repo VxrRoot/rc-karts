@@ -45,3 +45,18 @@ export async function getAttraction() {
 
   return data;
 }
+
+export async function getPricelist() {
+  const query = `*[_type == "pricelist"] {
+    wynajemPriv,
+    Gokarty,
+    KulaWodna,
+    walecWodny,
+    ZjezdzalniePtNd,
+    ZjezdzalniePonCzw
+  }`;
+
+  const data = await client.fetch(query);
+
+  return data;
+}

@@ -5,7 +5,7 @@ const page = () => {
   return (
     <main>
       <HeroSection text="Regulamin" showImg={false} />
-      <section className="mt-16 max-w-4xl mx-auto">
+      <section className="mt-16 px-4 max-w-4xl mx-auto">
         <h2 className="text-2xl font-semibold mt-5">1. Wstęp</h2>
         <p className="mt-2">
           Wstęp do parku dmuchanego jest możliwy tylko dla dzieci w wieku od 3

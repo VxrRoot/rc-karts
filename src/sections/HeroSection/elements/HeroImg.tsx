@@ -1,6 +1,6 @@
 import { FC } from "react";
 import Image from "next/image";
-import heroImg from "../../../assets/hero.png";
+import heroImg from "../../../assets/hero.webp";
 // import bgImg from "@/assest/contact-background.svg";
 
 interface IHeroImg {

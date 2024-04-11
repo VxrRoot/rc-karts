@@ -1,12 +1,13 @@
 import HeroSection from "@/sections/HeroSection/HeroSection";
+import PriceListSection from "@/sections/PricelistSection/PriceListSection";
+
+export const revalidate = 0;
 
 export default function Page() {
   return (
     <main className="">
       <HeroSection text="Cennik" showImg={false} />
-      <section className="mt-16">
-        <h1>Cennik</h1>
-      </section>
+      <PriceListSection />
     </main>
   );
 }

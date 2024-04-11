@@ -11,7 +11,6 @@ import logo from "@/assets/logo-small.png";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [headerColor, setHeaderColor] = useState(false);
   const router = useRouter();
   const pathname = usePathname();
 
@@ -33,14 +32,6 @@ export default function Header() {
     setMobileMenuOpen(!mobileMenuOpen);
   };
 
-  const changeHeader = () => {
-    if (window.scrollY >= 80) {
-      setHeaderColor(true);
-    } else {
-      setHeaderColor(false);
-    }
-  };
-
   // useEffect(() => {
   //   window.addEventListener("scroll", changeHeader);
 
@@ -55,7 +46,7 @@ export default function Header() {
 
   return (
     <header
-      className={`h-20 transition-all top-0 w-full z-40 fixed ${styles.header}`}
+      className={`h-20 rounded-full transition-all top-0 w-full z-40 fixed ${styles.header}`}
     >
       <nav
         className={`mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8 lg:py-0 h-full ${styles.nav}`}
@@ -63,7 +54,7 @@ export default function Header() {
       >
         <div className="flex lg:flex-1">
           <Link href={links.homePage} className="-m-1.5 text-white p-1.5">
-            <Image src={logo} alt="logo"></Image>
+            <Image src={logo} alt="logo" />
           </Link>
         </div>
         <div className="flex lg:hidden">
@@ -128,8 +119,8 @@ export default function Header() {
         }`}
       >
         <div className="flex items-center justify-between">
-          <Link href={links.homePage} className="-m-1.5 p-1.5">
-            RC - KARTS
+          <Link href={links.homePage} className="pt-8 ml-4">
+            <Image src={logo} alt="logo" />
           </Link>
         </div>
         <div className="mt-6 h-full flex pt-16 justify-center">

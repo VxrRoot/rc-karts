@@ -1,21 +1,15 @@
+import { links } from "@/constants";
 import { getHomePageImages } from "@/lib/query";
 import { Baloo_Chettan_2 } from "next/font/google";
-import Image from "next/image";
+import Link from "next/link";
 import "./GalleryHomePageSection.scss";
-import { useEffect } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { GalleryRow } from "./GalleryRow";
-import { links } from "@/constants";
-import Link from 'next/link';
-
 
 const baloo = Baloo_Chettan_2({ subsets: ["latin"], weight: ["600", "800"] });
 
 async function GallerySection() {
   const data = await getHomePageImages();
 
-  console.log(data);
   return (
     <section className={`py-32 overflow-hidden wrapper`}>
       <GalleryRow className="" data={data}></GalleryRow>
