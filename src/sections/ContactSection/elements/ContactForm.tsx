@@ -3,6 +3,8 @@ import React, { ChangeEvent, useState } from "react";
 import { Input } from "@/ui/Input/Input";
 import { TextArea } from "@/ui/TextArea/TextArea";
 import { toast } from "@/components/ui/use-toast";
+import Link from "next/link";
+import { links } from "@/constants";
 
 interface FormValueType {
   email: string;
@@ -194,8 +196,11 @@ const ContactForm = () => {
           }`}
           onChange={handleChangeCheckbox}
           checked={formValue.consent}
-        />{" "}
-        Akceptuje polityke prywatności
+        />
+        Akceptuje
+        <Link className="underline" href={links.privacyPolicy}>
+          polityke prywatności
+        </Link>
       </label>
       <span className="h-5 text-secondaryc">
         {formFieldsErrors.consent &&

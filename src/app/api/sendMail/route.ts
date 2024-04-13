@@ -90,8 +90,8 @@ export async function POST(req: Request) {
       
                   
                   <a target="_blank" style="text-decoration: none;"
-                      href="https://www.pmjsrutownice.pl"><img height="60px" width="auto" border="0" vspace="0" hspace="0"
-                      src="https://www.pmjsrutownice.pl/img/logo.png"
+                      href="https://rc-karts.vercel.app"><img height="60px" width="auto" border="0" vspace="0" hspace="0"
+                      src="https://rc-karts.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo-small.564bf847.png&w=640&q=75"
                       width="150" height="50"
                       alt="Logo" title="Logo" style="
                       color: #000000;
