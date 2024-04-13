@@ -213,8 +213,8 @@ const Page = () => {
             Pliki cookies wykorzystywane są w następujących celach:
             <ul className="list-disc pl-5">
               <li>
-                realizacji celów określonych powyżej w części "Istotne techniki
-                marketingowe"
+                realizacji celów określonych powyżej w części Istotne techniki
+                marketingowe
               </li>
             </ul>
           </li>
