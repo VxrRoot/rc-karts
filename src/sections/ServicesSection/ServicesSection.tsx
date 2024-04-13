@@ -148,7 +148,7 @@ const ServicesSection = () => {
     <section className="flex flex-col items-center  overflow-hidden relative pt-40 -mt-32">
       <svg
         id="blob"
-        className="rotate-45 md:translate-x-0 translate-x-1/4 absolute soft-shadow  w-[50rem] h-[50rem] z-10 "
+        className="rotate-45 md:translate-x-0 translate-x-1/4 absolute w-[50rem] h-[50rem] z-10 "
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1000 1000"
