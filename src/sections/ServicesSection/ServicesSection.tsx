@@ -2,8 +2,8 @@
 import Loader from "@/ui/Loader/Loader";
 import { Baloo_Chettan_2 } from "next/font/google";
 import React, { useEffect } from "react";
-import serviceImg1 from "@/assets/services1.png";
-import serviceImg2 from "@/assets/services2.png";
+import serviceImg1 from "@/assets/inflatable.svg";
+import serviceImg2 from "@/assets/inflatable2.svg";
 import serviceImg3 from "@/assets/cake.svg";
 import { ServiceRow } from "./ServiceRow";
 
@@ -30,7 +30,7 @@ const ServicesSection = () => {
       },
       narrow: {
         service1: { left: "-35%", top: "5%" },
-        service2: { left: "-35%", top: "30%" },
+        service2: { left: "-35%", top: "32%" },
         service3: { left: "-35%", top: "65%" },
       },
     };
@@ -148,7 +148,7 @@ const ServicesSection = () => {
     <section className="flex flex-col items-center  overflow-hidden relative pt-40 -mt-32">
       <svg
         id="blob"
-        className="rotate-45 md:translate-x-0 translate-x-1/4 absolute  w-[50rem] h-[50rem] z-10 "
+        className="rotate-45 md:translate-x-0 translate-x-1/4 absolute soft-shadow  w-[50rem] h-[50rem] z-10 "
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1000 1000"
@@ -196,7 +196,7 @@ M696.194 45.0455C839.4 105.861 1012.59 394.455 996.992 546.346C981.397 698.236 7
       </svg>
       <ServiceRow
         src={serviceImg1}
-        alt="Wejscie do parku dmuchańców"
+        alt="Wejscie do parku zabaw dmuchańców "
         heading="Odwiedz nas"
         className="service1"
         text="
@@ -205,7 +205,7 @@ Zapraszamy do świata niezapomnianych przygód i radosnej zabawy w naszym parku 
 
       <ServiceRow
         src={serviceImg2}
-        alt="Wejscie do parku dmuchańców"
+        alt="Wynajem dmuchańców"
         heading="Wynajem atrakcji"
         className="service2"
         text="
@@ -214,7 +214,7 @@ Zapraszamy do świata niezapomnianych przygód i radosnej zabawy w naszym parku 
       <ServiceRow
         src={serviceImg3}
         className="service3"
-        alt="Wejscie do parku dmuchańców"
+        alt="Organizajca urodzin Jedlicze"
         heading="Organizacja urodzin"
         scaleImage={true}
         text="

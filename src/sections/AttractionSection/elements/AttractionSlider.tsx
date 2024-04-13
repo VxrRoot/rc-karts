@@ -40,7 +40,7 @@ const AttractionSlider: FC<IAttractionSlider> = ({ elements }) => {
       {elements.map((item, idx) => (
         <SplideSlide key={idx} className="py-10 h-auto self-stretch text-white">
           <div
-            className={`gradient-background overflow-hidden shadow-xl rounded-3xl h-[30rem] p-4 mx-8 relative`}
+            className={`gradient-background overflow-hidden drop-shadow-lg rounded-3xl h-[30rem] p-4 mx-8 relative`}
           >
             <div className="relative w-full h-full rounded-lg overflow-auto">
               <Image

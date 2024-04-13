@@ -63,32 +63,32 @@ export default function Header() {
         <div className="hidden lg:flex lg:items-center lg:gap-x-12 lg:flex-1 lg:justify-end">
           <Link
             href={links.homePage}
-            className={`text-md tracking-wider whitespace-nowrap font-semibold leading-6 text-white hover:text-gray-200 transition-all `}
+            className={`text-md tracking-wider whitespace-nowrap font-semibold leading-6 text-white hover:text-secondaryc transition-all`}
           >
             Strona główna
           </Link>
 
           <Link
             href={links.terms}
-            className={`text-md tracking-wider leading-6 text-white font-semibold hover:text-gray-200 transition-all `}
+            className={`text-md tracking-wider leading-6 text-white font-semibold hover:text-secondaryc transition-all `}
           >
             Regulamin
           </Link>
           <Link
             href={links.attractions}
-            className={`text-md tracking-wider leading-6 text-white font-semibold hover:text-gray-200 transition-all `}
+            className={`text-md tracking-wider leading-6 text-white font-semibold hover:text-secondaryc transition-all `}
           >
             Atrakcje
           </Link>
           <Link
             href={links.pricelist}
-            className={`text-md tracking-wider leading-6 text-white font-semibold hover:text-gray-200 transition-all `}
+            className={`text-md tracking-wider leading-6 text-white font-semibold hover:text-secondaryc transition-all `}
           >
             Cennik
           </Link>
           <span
             onClick={() => scrollToSection("contact")}
-            className=" text-md tracking-wider whitespace-nowrap font-semibold leading-6 text-white bg-secondaryc py-2 px-4 rounded-full transition-all cursor-pointer"
+            className="shadow-on-hover text-md tracking-wider whitespace-nowrap font-semibold leading-6 text-white bg-secondaryc py-2 px-4 rounded-full transition-all cursor-pointer"
           >
             Skontaktuj się
           </span>
@@ -96,14 +96,14 @@ export default function Header() {
             <Link
               href={links.facebook}
               target="_blank"
-              className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7 text-white hover:text-gray-200"
+              className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7 text-white hover:text-secondaryc"
             >
               <FacebookIcon />
             </Link>
             <Link
               href={links.instagram}
               target="_blank"
-              className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7 text-white hover:text-gray-200"
+              className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7 text-white hover:text-secondaryc"
             >
               <InstaIcon />
             </Link>
@@ -128,25 +128,25 @@ export default function Header() {
             <div className="space-y-2 py-6 flex flex-col items-center">
               <Link
                 href={links.homePage}
-                className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7 text-white hover:text-gray-200"
+                className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7 text-white hover:text-secondaryc"
               >
                 Strona główna
               </Link>
               <Link
                 href={links.terms}
-                className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7 text-white hover:text-gray-200"
+                className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7 text-white hover:text-secondaryc"
               >
                 Regulamin
               </Link>
               <Link
                 href={links.attractions}
-                className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7 text-white hover:text-gray-200"
+                className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7 text-white hover:text-secondaryc"
               >
                 Atrakcje
               </Link>
               <Link
                 href={links.pricelist}
-                className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7 text-white hover:text-gray-200"
+                className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7 text-white hover:text-secondaryc"
               >
                 Cennik
               </Link>
@@ -154,7 +154,7 @@ export default function Header() {
             <div className="py-6 flex items-center justify-center">
               <span
                 onClick={() => scrollToSection("contact")}
-                className="text-2xl whitespace-nowrap font-semibold leading-6 text-white  py-2 px-4 rounded-2xl transition-all cursor-pointer"
+                className="text-2xl whitespace-nowrap font-semibold leading-6 text-white shadow-on-hover  py-2 px-4 rounded-2xl transition-all cursor-pointer"
               >
                 Skontaktuj się
               </span>
@@ -165,14 +165,14 @@ export default function Header() {
               <Link
                 href={links.facebook}
                 target="_blank"
-                className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7 text-white hover:text-gray-200"
+                className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7 color-on-hover hover:text-secondaryc"
               >
                 <FacebookIcon />
               </Link>
               <Link
                 href={links.instagram}
                 target="_blank"
-                className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7 text-white hover:text-gray-200"
+                className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7 color-on-hover text-white hover:text-secondaryc"
               >
                 <InstaIcon />
               </Link>

@@ -5,6 +5,7 @@ export const FacebookIcon: React.FC = () => (
     viewBox="0 0 29 29"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    className="color-on-hover"
   >
     <path
       d="M25 0.665039H4C2.06975 0.665039 0.5 2.23479 0.5 4.16504V25.165C0.5 27.0953 2.06975 28.665 4 28.665H14.5V19.04H11V14.665H14.5V11.165C14.5 8.26529 16.8503 5.91504 19.75 5.91504H23.25V10.29H21.5C20.534 10.29 19.75 10.199 19.75 11.165V14.665H24.125L22.375 19.04H19.75V28.665H25C26.9303 28.665 28.5 27.0953 28.5 25.165V4.16504C28.5 2.23479 26.9303 0.665039 25 0.665039Z"
@@ -19,6 +20,7 @@ export const InstaIcon: React.FC = () => (
     height="24"
     viewBox="0 0 24 24"
     fill="none"
+    className="color-on-hover"
     xmlns="http://www.w3.org/2000/svg"
   >
     <g clipPath="url(#clip0_9_1658)">

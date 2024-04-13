@@ -2,7 +2,7 @@ export const links = {
   homePage: "/",
   terms: "/regulamin",
   privacyPolicy: "/polityka-prywatnosci",
-  attractions: "#",
+  attractions: "../#attractions",
   pricelist: "/cennik",
   gallery: "/galeria",
   facebook: "https://www.facebook.com/rckartdmuchance/?locale=pl_PL",

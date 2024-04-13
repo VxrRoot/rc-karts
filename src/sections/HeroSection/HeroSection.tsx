@@ -22,7 +22,7 @@ const HeroSection: FC<IHeroSection> = ({
     <section
       className={`relative ${
         showButtons ? "h-[89vh]" : "h-[60vh]"
-      }  z-20 bg-cover bg-bottom -mt-[30px] lg:mt-0 bg-[url('../assets/contact-background.svg')]`}
+      }  z-20 bg-cover bg-bottom soft-shadow -mt-[30px] lg:mt-0 bg-[url('../assets/contact-background.svg')]`}
     >
       {showImg ? <HeroImg bigImg={showButtons} /> : ""}
       <div
@@ -39,11 +39,11 @@ const HeroSection: FC<IHeroSection> = ({
           <div className="flex text-white flex-col lg:flex-row items-center justify-center text-xl mt-8">
             <Link
               href={links.attractions}
-              className="bg-gradient-to-r from-[#FF3E27] to-[#FF3061] py-2 px-10 rounded-2xl"
+              className="bg-gradient-to-r from-[#FF3E27] to-[#FF3061] py-2 px-10 rounded-full shadow-on-hover"
             >
               Atrakcje
             </Link>
-            <Link href={links.pricelist} className="mt-4 lg:mt-0 lg:ml-12">
+            <Link href={links.pricelist} className="mt-4 lg:mt-0 lg:ml-12 color-on-hover">
               Cennik
             </Link>
           </div>

@@ -16,7 +16,7 @@ interface IServiceRow {
     alt: string,
     isReversed?: boolean,
     className:string,
-    scaleImage?:boolean
+    scaleImage?:boolean,
 }
 
 export const ServiceRow: FC<IServiceRow> = ({ heading, text, src, alt, isReversed = false,className,scaleImage = false }) => {

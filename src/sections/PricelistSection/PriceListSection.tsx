@@ -10,9 +10,9 @@ const PriceListSection = async () => {
   const data = response[0];
 
   return (
-    <section className="mt-16 max-w-7xl xl:mx-auto text-2xl rounded-xl border-black border-2 mx-4">
+    <section className="mt-16 max-w-7xl xl:mx-auto text-2xl rounded-xl mx-4">
       <div
-        className={`bg-[#7ed56f]/20 flex flex-col lg:flex-row justify-between ${baloo.className} border-b-2 py-4 px-2 border-black`}
+        className={` flex flex-col lg:flex-row justify-between ${baloo.className} border-b-2 py-4 px-2 border-black`}
       >
         <p className={``}>
           Wynajem zjeżdżalni impreza prywatna do 8 godzin bez obsługi
@@ -22,7 +22,7 @@ const PriceListSection = async () => {
         </p>
       </div>
       <div
-        className={`bg-[#7ed56f]/50 flex flex-col lg:flex-row justify-between ${baloo.className} border-b-2 py-4 px-2 border-black`}
+        className={` flex flex-col lg:flex-row justify-between ${baloo.className} border-b-2 py-4 px-2 border-black`}
       >
         <p
           className={``}
@@ -32,7 +32,7 @@ const PriceListSection = async () => {
         </p>
       </div>
       <div
-        className={`bg-[#7ed56f]/20 flex flex-col lg:flex-row justify-between ${baloo.className} border-b-2 py-4 px-2 border-black`}
+        className={` flex flex-col lg:flex-row justify-between ${baloo.className} border-b-2 py-4 px-2 border-black`}
       >
         <p className={``}>{`Kula wodna ( ${data.KulaWodna.czas} min )`}</p>
         <p className="whitespace-nowrap lg:ml-4 ml-auto">
@@ -40,7 +40,7 @@ const PriceListSection = async () => {
         </p>
       </div>
       <div
-        className={`bg-[#7ed56f]/50 flex flex-col lg:flex-row justify-between ${baloo.className} border-b-2 py-4 px-2 border-black`}
+        className={`flex flex-col lg:flex-row justify-between ${baloo.className} border-b-2 py-4 px-2 border-black`}
       >
         <p
           className={``}
@@ -50,7 +50,7 @@ const PriceListSection = async () => {
         </p>
       </div>
       <div
-        className={`bg-[#7ed56f]/20 flex flex-col lg:flex-row justify-between ${baloo.className} border-b-2 py-4 px-2 border-black`}
+        className={` flex flex-col lg:flex-row justify-between ${baloo.className} border-b-2 py-4 px-2 border-black`}
       >
         <p className={``}>Wejście na dmuchańce pt-nd-święta</p>
         <p className="whitespace-nowrap flex flex-col lg:ml-4 ml-auto">
@@ -60,7 +60,7 @@ const PriceListSection = async () => {
         </p>
       </div>
       <div
-        className={`bg-[#7ed56f]/50 flex flex-col lg:flex-row justify-between ${baloo.className} py-4 px-2 border-black`}
+        className={` flex flex-col lg:flex-row justify-between ${baloo.className} py-4 px-2 border-black`}
       >
         <p className={``}>Wejście na dmuchańce pon-czw</p>
         <p className="whitespace-nowrap flex flex-col lg:ml-4 ml-auto">

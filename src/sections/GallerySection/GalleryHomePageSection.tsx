@@ -11,14 +11,14 @@ async function GallerySection() {
   const data = await getHomePageImages();
 
   return (
-    <section className={`py-32 overflow-hidden wrapper`}>
+    <section className={`md:pt-8 pb-32 overflow-hidden wrapper`}>
       <GalleryRow className="" data={data}></GalleryRow>
       <GalleryRow className="-translate-x-[80rem]" data={data}></GalleryRow>
 
       <div className="w-full flex justify-center">
         <Link
           href={links.gallery}
-          className={`bg-primaryc mt-10 py-4 px-10 rounded-2xl text-white hover:text-gray-200 transition-all `}
+          className={` bg-gradient-to-r from-[#FF3E27] to-[#FF3061] mt-10 py-4 px-10 rounded-full shadow-lg text-white transition-all shadow-on-hover`}
         >
           Zobacz wszystkie zdjęcia
         </Link>
