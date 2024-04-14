@@ -21,9 +21,10 @@ const FAQAccordion: FC<IFAQAccordion> = ({ data }) => {
       collapsible
       className={`${baloo.className} mt-10 text-xl max-w-4xl mx-auto`}
     >
-      {data.map((item) => {
+      {data.map((item, idx) => {
         return (
           <AccordionItem
+            key={`${item.question}-${idx}`}
             className=" border-[#3F8D40] border-b-2"
             value={item.question}
           >
