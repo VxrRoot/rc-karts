@@ -19,7 +19,7 @@ const FAQAccordion: FC<IFAQAccordion> = ({ data }) => {
     <Accordion
       type="single"
       collapsible
-      className={`${baloo.className} mt-10 text-xl max-w-4xl mx-auto`}
+      className={`${baloo.className} mt-10 px-4 text-xl max-w-4xl mx-auto`}
     >
       {data.map((item, idx) => {
         return (

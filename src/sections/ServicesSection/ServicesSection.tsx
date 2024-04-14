@@ -73,7 +73,7 @@ const ServicesSection = () => {
               if (blob) {
                 blob.animate(
                   [
-                    { transform: "scaleY(1)"},
+                    { transform: "scaleY(1)" },
                     { transform: "scaleY(2) scaleX(.9)" },
                     { transform: "scaleY(1)", left: left, top: top },
                   ],
@@ -93,7 +93,7 @@ const ServicesSection = () => {
               if (blob) {
                 blob.animate(
                   [
-                    { transform: "scaleY(1)"},
+                    { transform: "scaleY(1)" },
                     { transform: "scaleY(2) scaleX(.9)" },
                     { transform: "scaleY(1)", left: left, top: top },
                   ],
@@ -113,7 +113,7 @@ const ServicesSection = () => {
               if (blob) {
                 blob.animate(
                   [
-                    { transform: "scaleY(1)"},
+                    { transform: "scaleY(1)" },
                     { transform: "scaleY(2) scaleX(.9)" },
                     { transform: "scaleY(1)", left: left, top: top },
                   ],
@@ -198,7 +198,7 @@ M696.194 45.0455C839.4 105.861 1012.59 394.455 996.992 546.346C981.397 698.236 7
         src={serviceImg1}
         alt="Wejscie do parku zabaw dmuchańców "
         heading="Odwiedz nas"
-        className="service1"
+        addtionalClassName="service1"
         text="
 Zapraszamy do świata niezapomnianych przygód i radosnej zabawy w naszym parku atrakcji dmuchanych! Jesteśmy miejscem, gdzie każde dziecko znajdzie coś dla siebie – od gigantycznych zjeżdżalni, przez labirynty, aż po interaktywne zamki i baseny z piłeczkami. Nasz park to idealne miejsce na rodzinną eskapadę, gdzie bezpieczeństwo i zabawa idą w parze."
       />
@@ -207,13 +207,13 @@ Zapraszamy do świata niezapomnianych przygód i radosnej zabawy w naszym parku 
         src={serviceImg2}
         alt="Wynajem dmuchańców"
         heading="Wynajem atrakcji"
-        className="service2"
+        addtionalClassName="service2"
         text="
                 Planujesz wydarzenie, które ma zapisać się złotymi zgłoskami w pamięci uczestników? Chcesz, aby Twoja impreza firmowa, festyn, urodziny dziecka, piknik rodzinny lub jakiekolwiek inne zgromadzenie stało się niezapomnianym przeżyciem? Mamy dla Ciebie idealne rozwiązanie – wynajem atrakcji dmuchanych, który gwarantuje radosną zabawę dla dzieci i dorosłych!"
       />
       <ServiceRow
         src={serviceImg3}
-        className="service3"
+        addtionalClassName="service3"
         alt="Organizajca urodzin Jedlicze"
         heading="Organizacja urodzin"
         scaleImage={true}
