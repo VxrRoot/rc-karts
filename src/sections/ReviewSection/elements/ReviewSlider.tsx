@@ -53,9 +53,7 @@ const ReviewSlider: FC<IReviewSlider> = ({ elements }) => {
                 <QuoteIcon />
               </Link>
 
-              <Link
-                href={item.link}
-              >
+              <Link href={item.link}>
                 <GoogleIcon />
               </Link>
             </div>
@@ -67,7 +65,7 @@ const ReviewSlider: FC<IReviewSlider> = ({ elements }) => {
               <StarIcon />
               <StarIcon />
             </div>
-            <p className="text-lg italic">"{item.text}"</p>
+            <p className="text-lg italic">{`"${item.text}"`}</p>
             <p className="mt-8">-{item.author}</p>
           </div>
         </SplideSlide>
