@@ -5,7 +5,7 @@ const baloo = Baloo_Chettan_2({ subsets: ["latin"], weight: ["600", "800"] });
 
 const LocationSection: FC = () => {
   return (
-    <section className="pt-16">
+    <section id="location" className="pt-16">
       <h3
         className={`${baloo.className} text-center p-0 m-0 text-[#3F8D40] font-semibold text-4xl lg:text-5xl `}
       >

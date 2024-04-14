@@ -45,7 +45,7 @@ const ContactSection = async () => {
             <div className="flex  items-center">
               <Link
                 className="flex flex-row justify-center items-center gap-6 drop-shadow-lg"
-                href="facebook"
+                href={`mailto:${data[0].email}`}
               >
                 {" "}
                 <EmailIcon /> {data[0].email}
@@ -54,7 +54,7 @@ const ContactSection = async () => {
             <div className="flex  items-center">
               <Link
                 className="flex flex-row justify-center items-center gap-6 drop-shadow-lg"
-                href="facebook"
+                href={`tel:${data[0].phone}`}
               >
                 {" "}
                 <PhoneIcon /> {data[0].phone}
@@ -63,7 +63,7 @@ const ContactSection = async () => {
             <div className="flex  items-center">
               <Link
                 className="flex flex-row justify-center items-center gap-6 drop-shadow-lg"
-                href="facebook"
+                href="#location"
               >
                 {" "}
                 <LocalIcon /> {data[0].address}

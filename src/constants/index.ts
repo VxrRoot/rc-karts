@@ -7,6 +7,7 @@ export const links = {
   gallery: "/galeria",
   facebook: "https://www.facebook.com/rckartdmuchance/?locale=pl_PL",
   instagram: "https://www.instagram.com/rckartdmuchance/",
+  review: "https://g.co/kgs/gxC3E4X",
 };
 
 export const siteUrl = "";

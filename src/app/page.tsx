@@ -6,6 +6,7 @@ import GallerySection from "@/sections/GallerySection/GalleryHomePageSection";
 import HeroSection from "@/sections/HeroSection/HeroSection";
 import LocationSection from "@/sections/LocationSection/LocationSection";
 import ServiceSection from "@/sections/ServicesSection/ServicesSection";
+import ReviewSection from '../sections/ReviewSection/ReviewSection';
 
 export const revalidate = 0;
 
@@ -18,6 +19,7 @@ export default async function Home() {
       <ServiceSection />
       <AttractionSection />
       <FAQSection />
+      <ReviewSection/>
       <ContactSection />
       <LocationSection />
     </main>

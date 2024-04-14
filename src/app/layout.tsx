@@ -2,12 +2,12 @@ import Footer from "@/ui/Footer";
 import Header from "@/ui/Header/Header";
 import Loader from "@/ui/Loader/Loader";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Baloo_Chettan_2, Inter } from "next/font/google";
 import "./globals.css";
 import { AOSInit } from "./aos";
 import { Toaster } from "@/components/ui/toaster";
 
-const inter = Inter({ subsets: ["latin"] });
+const baloo = Baloo_Chettan_2({ subsets: ["latin"], weight: ["600", "800"] });
 
 export const metadata: Metadata = {
   icons: {
@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="bg-white ">
       <AOSInit />
-      <body className={`${inter.className} overflow-x-hidden`}>
+      <body className={`${baloo.className} overflow-x-hidden`}>
         <Header />
         {children}
         <Toaster />
