@@ -7,6 +7,7 @@ export default function Page() {
   return (
     <main className="">
       <HeroSection text="Cennik" showImg={false} />
+      {/* @ts-expect-error Server Component */}
       <PriceListSection />
     </main>
   );

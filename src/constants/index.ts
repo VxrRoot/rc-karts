@@ -1,5 +1,6 @@
 export const links = {
   homePage: "/",
+  news: "/aktualnosci",
   terms: "/regulamin",
   privacyPolicy: "/polityka-prywatnosci",
   attractions: "../#attractions",
