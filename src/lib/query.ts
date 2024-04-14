@@ -60,3 +60,14 @@ export async function getPricelist() {
 
   return data;
 }
+
+export async function getFAQ() {
+  const query = `*[_type == "qna"] {
+    question,
+    answear
+  }`;
+
+  const data = await client.fetch(query);
+
+  return data;
+}

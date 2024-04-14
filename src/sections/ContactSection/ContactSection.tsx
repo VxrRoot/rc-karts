@@ -29,7 +29,7 @@ const ContactSection = async () => {
       id="contact"
       className={`flex soft-shadow px-2 md:px-8 flex-col items-center relative bg-cover bg-center z-30 bg-[url('../assets/contact-background.svg')] w-full min-h-[1000px] lg:min-h-[880px] ${baloo.className} ${styles.contact}`}
     >
-      <h3 className="text-secondary text-4xl mt-32 drop-shadow">
+      <h3 className="text-secondary text-4xl lg:text-5xl mt-32 drop-shadow">
         Skontaktuj się z nami
       </h3>
       <div

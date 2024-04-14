@@ -51,7 +51,11 @@ const AttractionSlider: FC<IAttractionSlider> = ({ elements }) => {
                 className="rounded-lg h-full w-full object-cover "
               />
               <div className="gradient-overlay absolute w-full h-full left-0 top-0 "></div>
-              <h3 className={`pt-8 pb-6 font-semibold text-3xl absolute bottom-0 w-full overflow-hidden text-center ${baloo.className}`}>{item.name}</h3>
+              <h3
+                className={`pt-8 pb-6 font-semibold text-3xl absolute bottom-0 w-full overflow-hidden text-center ${baloo.className}`}
+              >
+                {item.name}
+              </h3>
             </div>
           </div>
         </SplideSlide>
