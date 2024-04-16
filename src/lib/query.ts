@@ -71,3 +71,20 @@ export async function getFAQ() {
 
   return data;
 }
+
+export async function getNews(limit?: number) {
+  const limitParam = limit ? `[0...${limit}]` : "";
+
+  const query = `*[_type == "news"]${limitParam} | order(_createdAt desc) {
+        id,
+        title,
+        smallDescription,
+        "currentSlug": slug.current,
+        titleImage,
+        publishedAt
+      }`;
+
+  const data = await client.fetch(query);
+
+  return data;
+}

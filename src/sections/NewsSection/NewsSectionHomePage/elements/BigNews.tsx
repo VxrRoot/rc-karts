@@ -1,31 +1,44 @@
-import React from "react";
+import React, { FC } from "react";
 import Image from "next/image";
 import testImg from "../../../../assets/hero.webp";
 import Link from "next/link";
 import { links } from "@/constants";
+import { urlFor } from "@/lib/sanity";
+import empytBlogImg from "../../../../assets/single-blog-post.svg";
 
-const BigNews = () => {
+interface IBigNews {
+  title: string;
+  smallDescription: string;
+  image: any;
+  currentSlug: string;
+  publishedAt: string;
+}
+
+const BigNews: FC<IBigNews> = ({
+  currentSlug,
+  image,
+  smallDescription,
+  publishedAt,
+  title,
+}) => {
+  const [dateString, timeString] = publishedAt.split("T");
+
   return (
-    <div className="flex flex-col bg-white shadow-xl overflow-hidden rounded-[48px] h-full max-h-[600px] ">
+    <div className="flex flex-col bg-white shadow-xl overflow-hidden rounded-[48px] h-[600px] mb-8 lg:mb-0">
       <Image
-        src={testImg}
+        src={image ? urlFor(image).url() : empytBlogImg}
         alt="News image"
-        className=" cover w-full h-3/5 object-cover"
+        className="cover w-full h-3/5 object-cover"
+        width={2000}
+        height={2000}
       />
-      <div className="px-8 py-4 rounded-[48px] -mt-14 bg-white h-full flex justify-around flex-col">
-        <p className="text-[#3F8D40] text-2xl">Tytuł aktualności</p>
-        <span>20/02/2024</span>
-        <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industrys standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged
-        </p>
-        <div className="flex items-end">
+      <div className="px-8 py-4 rounded-[48px] -mt-14 bg-white h-full grow flex justify-around flex-col">
+        <p className="text-[#3F8D40] text-2xl">{title}</p>
+        <span>{dateString}</span>
+        <p>{`${smallDescription.substring(0, 300)}...`}</p>
+        <div className="flex justify-end mt-2 lg:justify-start">
           <Link
-            href={links.pricelist}
+            href={`${links.news}/${currentSlug}`}
             className={` bg-gradient-to-r from-[#FF3E27] to-[#FF3061] text-nowrap py-2 px-10 rounded-full shadow-lg text-white shadow-on-hover`}
           >
             Czytaj

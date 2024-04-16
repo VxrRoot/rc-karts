@@ -7,6 +7,7 @@ import HeroSection from "@/sections/HeroSection/HeroSection";
 import LocationSection from "@/sections/LocationSection/LocationSection";
 import NewsSectionHomePage from "@/sections/NewsSection/NewsSectionHomePage/NewsSectionHomePage";
 import ServiceSection from "@/sections/ServicesSection/ServicesSection";
+import { Suspense } from "react";
 import ReviewSection from "../sections/ReviewSection/ReviewSection";
 
 export const revalidate = 0;
@@ -16,18 +17,25 @@ export default function Home() {
     <main className="">
       <HeroSection showButtons={true} text="PARK ZABAW DLA DZIECI" />
       <AboutSection />
-      <NewsSectionHomePage />
-
-      <GallerySection />
+      <Suspense fallback={<div>...</div>}>
+        <NewsSectionHomePage />
+      </Suspense>
+      <Suspense fallback={<div>...</div>}>
+        <GallerySection />
+      </Suspense>
       <ServiceSection />
-
-      <AttractionSection />
-
-      <FAQSection />
-
-      <ReviewSection />
-
-      <ContactSection />
+      <Suspense fallback={<div>...</div>}>
+        <AttractionSection />
+      </Suspense>
+      <Suspense fallback={<div>...</div>}>
+        <FAQSection />
+      </Suspense>
+      <Suspense fallback={<div>...</div>}>
+        <ReviewSection />
+      </Suspense>
+      <Suspense fallback={<div>...</div>}>
+        <ContactSection />
+      </Suspense>
       <LocationSection />
     </main>
   );
