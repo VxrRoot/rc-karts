@@ -1,6 +1,5 @@
 "use client";
 
-import { defaultPage, defaultPerPage } from "@/app/aktualnosci/page";
 import {
   Pagination,
   PaginationContent,
@@ -8,7 +7,7 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination";
-import { links } from "@/constants";
+import { defaultPage, defaultPerPage, links } from "@/constants";
 import { useSearchParams, useRouter } from "next/navigation";
 import React, { FC } from "react";
 

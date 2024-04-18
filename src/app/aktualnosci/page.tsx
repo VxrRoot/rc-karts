@@ -1,3 +1,4 @@
+import { defaultPage, defaultPerPage } from "@/constants";
 import HeroSection from "@/sections/HeroSection/HeroSection";
 import NewsSection from "@/sections/NewsSection/NewsSection";
 import Spinner from "@/ui/Loader/Spinner";
@@ -5,9 +6,6 @@ import PaginationControls from "@/ui/PaginationControls/PaginationControls";
 import { NextPage } from "next";
 import { Suspense } from "react";
 import { PageProps } from "../../../.next/types/app/page";
-
-export const defaultPage = "1";
-export const defaultPerPage = "2";
 
 const Page: NextPage<PageProps> = ({ searchParams }) => {
   const page = searchParams["page"] ?? defaultPage;

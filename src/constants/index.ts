@@ -11,4 +11,7 @@ export const links = {
   review: "https://g.co/kgs/gxC3E4X",
 };
 
+export const defaultPage = "1";
+export const defaultPerPage = "2";
+
 export const siteUrl = "";
