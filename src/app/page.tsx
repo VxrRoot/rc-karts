@@ -7,6 +7,8 @@ import HeroSection from "@/sections/HeroSection/HeroSection";
 import LocationSection from "@/sections/LocationSection/LocationSection";
 import NewsSectionHomePage from "@/sections/NewsSection/NewsSectionHomePage/NewsSectionHomePage";
 import ServiceSection from "@/sections/ServicesSection/ServicesSection";
+import Loader from "@/ui/Loader/Loader";
+import Spinner from "@/ui/Loader/Spinner";
 import { Suspense } from "react";
 import ReviewSection from "../sections/ReviewSection/ReviewSection";
 
@@ -17,26 +19,27 @@ export default function Home() {
     <main className="">
       <HeroSection showButtons={true} text="PARK ZABAW DLA DZIECI" />
       <AboutSection />
-      <Suspense fallback={<div>...</div>}>
+      <Suspense fallback={<Spinner />}>
         <NewsSectionHomePage />
       </Suspense>
-      <Suspense fallback={<div>...</div>}>
+      <Suspense fallback={<Spinner />}>
         <GallerySection />
       </Suspense>
       <ServiceSection />
-      <Suspense fallback={<div>...</div>}>
+      <Suspense fallback={<Spinner />}>
         <AttractionSection />
       </Suspense>
-      <Suspense fallback={<div>...</div>}>
+      <Suspense fallback={<Spinner />}>
         <FAQSection />
       </Suspense>
-      <Suspense fallback={<div>...</div>}>
+      <Suspense fallback={<Spinner />}>
         <ReviewSection />
       </Suspense>
-      <Suspense fallback={<div>...</div>}>
+      <Suspense fallback={<Spinner />}>
         <ContactSection />
       </Suspense>
       <LocationSection />
+      <Loader />
     </main>
   );
 }

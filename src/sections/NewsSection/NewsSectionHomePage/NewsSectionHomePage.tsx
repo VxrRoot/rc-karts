@@ -28,7 +28,7 @@ const NewsSectionHomePage = async () => {
             title={firstPost.title}
           />
         </div>
-        <div className=" lg:basis-3/5 flex justify-start flex-col">
+        <div className="lg:basis-3/5 flex gap-6 justify-start flex-col">
           {restPosts.map((item, idx) => (
             <SmallNews
               key={`${item.title}-${idx}`}

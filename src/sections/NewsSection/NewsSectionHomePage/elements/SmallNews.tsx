@@ -19,13 +19,15 @@ const SmallNews: FC<ISmallNews> = ({
   const [dateString, timeString] = publishedAt.split("T");
 
   return (
-    <div className={`shadow-xl bg-white flex mb-6 last:mb-0 rounded-3xl p-4`}>
-      <div className="flex flex-col">
+    <div
+      className={`shadow-xl bg-white flex grow basis-full last:mb-0 rounded-3xl p-4 min-h-56 max-h-56 lg:h-auto lg:min-h-28`}
+    >
+      <div className="flex flex-col justify-between">
         <div className="flex items-center h-8">
           <CalendarIcon />
           <span className="pl-2 text-gray-600">{dateString}</span>
         </div>
-        <p className="py-4 text-[#3F8D40] text-2xl">{title}</p>
+        <p className="text-[#3F8D40] text-2xl">{title}</p>
         <p>{`${smallDescription.substring(0, 70)}...`}</p>
       </div>
       <div className="flex ml-auto justify-end items-end pl-3">

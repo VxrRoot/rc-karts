@@ -1,5 +1,7 @@
 import HeroSection from "@/sections/HeroSection/HeroSection";
 import PriceListSection from "@/sections/PricelistSection/PriceListSection";
+import Spinner from "@/ui/Loader/Spinner";
+import { Suspense } from "react";
 
 export const revalidate = 0;
 
@@ -7,7 +9,9 @@ export default function Page() {
   return (
     <main className="">
       <HeroSection text="Cennik" showImg={false} />
-      <PriceListSection />
+      <Suspense fallback={<Spinner />}>
+        <PriceListSection />
+      </Suspense>
     </main>
   );
 }
