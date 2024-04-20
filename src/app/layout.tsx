@@ -1,13 +1,15 @@
+import { Toaster } from "@/components/ui/toaster";
 import Footer from "@/ui/Footer";
 import Header from "@/ui/Header/Header";
-import Loader from "@/ui/Loader/Loader";
 import type { Metadata } from "next";
-import { Baloo_Chettan_2, Inter } from "next/font/google";
-import "./globals.css";
+import { Baloo_Chettan_2 } from "next/font/google";
 import { AOSInit } from "./aos";
-import { Toaster } from "@/components/ui/toaster";
+import "./globals.css";
 
-const baloo = Baloo_Chettan_2({ subsets: ["latin"], weight: ["600", "800"] });
+const baloo = Baloo_Chettan_2({
+  subsets: ["latin"],
+  weight: ["600", "800"],
+});
 
 export const metadata: Metadata = {
   icons: {

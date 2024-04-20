@@ -1,5 +1,4 @@
 "use client";
-
 import {
   Pagination,
   PaginationContent,
@@ -34,7 +33,6 @@ const PaginationControls: FC<IPaginationControls> = ({
             className={`${
               hasPrevPage ? "cursor-pointer" : "pointer-events-none opacity-50"
             }`}
-            aria-disabled="true"
             onClick={() =>
               router.push(
                 `${links.news}/?page=${Number(page) - 1}&per_page=${perPage}`

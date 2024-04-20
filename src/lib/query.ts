@@ -80,7 +80,7 @@ export async function getNews(end = 5, start = 0) {
         "currentSlug": slug.current,
         titleImage,
         publishedAt,
-        "conut": count(*[_type == "news"])
+        "count": count(*[_type == "news"])
       }
       `;
 

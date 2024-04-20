@@ -4,6 +4,7 @@ export interface ISimplyNewsPost {
   currentSlug: string;
   publishedAt: string;
   titleImage: any;
+  count: number;
 }
 
 export interface IFullNewsPost extends ISimplyNewsPost {
