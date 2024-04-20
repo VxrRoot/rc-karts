@@ -19,7 +19,7 @@ const SmallNews: FC<ISmallNews> = ({
   const [dateString, timeString] = publishedAt.split("T");
 
   return (
-    <div
+    <article
       className={`shadow-xl bg-white flex grow basis-full last:mb-0 rounded-3xl p-4 min-h-56 max-h-56 lg:h-auto lg:min-h-28`}
     >
       <div className="flex flex-col justify-between">
@@ -38,7 +38,7 @@ const SmallNews: FC<ISmallNews> = ({
           Czytaj
         </Link>
       </div>
-    </div>
+    </article>
   );
 };
 

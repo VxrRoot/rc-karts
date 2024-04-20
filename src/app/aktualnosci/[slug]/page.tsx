@@ -38,7 +38,7 @@ const SingleNews = async ({ params }: { params: { slug: string } }) => {
           height={2000}
         />
       </section>
-      <section
+      <article
         className={`h-full pt-40 pb-20 mx-auto max-w-7xl relative lg:min-h-[500px] min-h-[300px] ${inter.className} `}
       >
         <Link className="flex cursor-pointer ml-4 w-20  " href={links.news}>
@@ -50,7 +50,7 @@ const SingleNews = async ({ params }: { params: { slug: string } }) => {
         >
           <PortableText value={data[0].content} components={components} />
         </div>
-      </section>
+      </article>
     </main>
   );
 };

@@ -24,7 +24,7 @@ const BigNews: FC<IBigNews> = ({
   const [dateString, timeString] = publishedAt.split("T");
 
   return (
-    <div className="flex flex-col bg-white shadow-xl overflow-hidden rounded-[48px] h-[600px] mb-8 lg:mb-0">
+    <article className="flex flex-col bg-white shadow-xl overflow-hidden rounded-[48px] h-[600px] mb-8 lg:mb-0">
       <Image
         src={image ? urlFor(image).url() : empytBlogImg}
         alt="News image"
@@ -45,7 +45,7 @@ const BigNews: FC<IBigNews> = ({
           </Link>
         </div>
       </div>
-    </div>
+    </article>
   );
 };
 

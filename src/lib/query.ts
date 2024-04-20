@@ -101,3 +101,15 @@ export async function getSingleNews(slug: string) {
 
   return data;
 }
+
+export async function getOpinions() {
+  const query = `*[_type == 'opinions'] {
+    opinion,
+    author,
+    url
+  }`;
+
+  const data = await client.fetch(query);
+
+  return data;
+}

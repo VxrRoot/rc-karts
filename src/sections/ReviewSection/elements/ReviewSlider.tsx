@@ -1,19 +1,16 @@
 "use client";
-import { FC } from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
-import Image, { StaticImageData } from "next/image";
-import testImg from "@/assets/empty.png";
+import { FC } from "react";
 // Default theme
 import "@splidejs/react-splide/css";
-import { urlFor } from "@/lib/sanity";
 import { Baloo_Chettan_2 } from "next/font/google";
-import { QuoteIcon, StarIcon, GoogleIcon } from "../../../assets/icons";
 import Link from "next/link";
+import { GoogleIcon, QuoteIcon, StarIcon } from "../../../assets/icons";
 
 const baloo = Baloo_Chettan_2({ subsets: ["latin"], weight: ["600", "800"] });
 
 interface IReviewSlider {
-  elements: { author: string; text: string; link: string; rating: number }[];
+  elements: { author: string; opinion: string; url: string; rating: number }[];
 }
 
 const ReviewSlider: FC<IReviewSlider> = ({ elements }) => {
@@ -44,16 +41,16 @@ const ReviewSlider: FC<IReviewSlider> = ({ elements }) => {
       className="pt-0"
     >
       {elements.map((item, idx) => (
-        <SplideSlide key={idx} className="h-auto self-stretch text-white">
+        <SplideSlide key={idx} className="relative self-stretch text-white">
           <div
-            className={`gradient-background overflow-hidden shadow-lg rounded-3xl min-h-[20rem] mx-8 relative p-12 `}
+            className={`gradient-background overflow-hidden shadow-lg rounded-3xl min-h-[20rem] h-full mx-8 relative p-12 `}
           >
             <div className="flex justify-between">
-              <Link href={item.link}>
+              <Link href={item.url}>
                 <QuoteIcon />
               </Link>
 
-              <Link href={item.link}>
+              <Link href={item.url}>
                 <GoogleIcon />
               </Link>
             </div>
@@ -65,7 +62,7 @@ const ReviewSlider: FC<IReviewSlider> = ({ elements }) => {
               <StarIcon />
               <StarIcon />
             </div>
-            <p className="text-lg italic">{`"${item.text}"`}</p>
+            <p className="text-lg italic">{`"${item.opinion}"`}</p>
             <p className="mt-8">-{item.author}</p>
           </div>
         </SplideSlide>
