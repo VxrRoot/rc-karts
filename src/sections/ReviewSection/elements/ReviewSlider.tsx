@@ -46,11 +46,11 @@ const ReviewSlider: FC<IReviewSlider> = ({ elements }) => {
             className={`gradient-background overflow-hidden shadow-lg rounded-3xl min-h-[20rem] h-full mx-8 relative p-12 `}
           >
             <div className="flex justify-between">
-              <Link href={item.url}>
+              <Link href={item.url} target="_blank">
                 <QuoteIcon />
               </Link>
 
-              <Link href={item.url}>
+              <Link href={item.url} target="_blank">
                 <GoogleIcon />
               </Link>
             </div>
