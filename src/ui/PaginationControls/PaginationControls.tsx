@@ -3,6 +3,7 @@ import {
   Pagination,
   PaginationContent,
   PaginationItem,
+  PaginationLink,
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination";
@@ -39,6 +40,9 @@ const PaginationControls: FC<IPaginationControls> = ({
               )
             }
           />
+        </PaginationItem>
+        <PaginationItem>
+          <PaginationLink>{page}</PaginationLink>
         </PaginationItem>
         <PaginationItem>
           <PaginationNext

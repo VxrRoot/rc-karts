@@ -12,6 +12,6 @@ export const links = {
 };
 
 export const defaultPage = "1";
-export const defaultPerPage = "6";
+export const defaultPerPage = "2";
 
 export const siteUrl = "";
