@@ -64,7 +64,7 @@ const Footer = () => {
       <div className="border-b border-gray-100"></div>
       <div className="container px-4 mx-auto">
         <p className="py-10 md:pb-20 text-md text-gray-400 font-medium text-center">
-          © 2023 rc-karts.pl Wszystkie prawa zastrzeżone.
+          © 2024 rckart.pl Wszystkie prawa zastrzeżone.
         </p>
       </div>
     </footer>

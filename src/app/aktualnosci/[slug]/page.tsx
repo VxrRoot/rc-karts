@@ -25,7 +25,7 @@ const SingleNews = async ({ params }: { params: { slug: string } }) => {
   return (
     <main>
       <section
-        className={`relative h-[60vh] z-20 bg-cover bg-bottom soft-shadow -mt-[30px] lg:mt-0 bg-[url('../assets/contact-background.svg')]`}
+        className={`relative h-[70rem] w-full z-20 bg-cover bg-bottom soft-shadow -mt-[10rem] mask`}
       >
         <Image
           alt="Blog image"
@@ -33,18 +33,19 @@ const SingleNews = async ({ params }: { params: { slug: string } }) => {
             data[0].titleImage ? urlFor(data[0].titleImage).url() : empytBlogImg
           }
           priority
-          className={`h-[60vh] w-full z-30 object-cover object-center brightness-[.4]`}
+          className={`w-full h-[70rem] z-30 object-cover object-center brightness-[.4]`}
           width={2000}
           height={2000}
         />
+        <h1 className="text-4xl px-4  w-full font-bold text-center text-white absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">{data[0].title}</h1>
       </section>
       <article
-        className={`h-full pt-40 pb-20 mx-auto max-w-7xl relative lg:min-h-[500px] min-h-[300px] ${inter.className} `}
+        className={`h-full -mt-48 pb-20 mx-auto max-w-7xl relative lg:min-h-[500px] min-h-[300px] ${inter.className} `}
       >
-        <Link className="flex cursor-pointer ml-4 w-20  " href={links.news}>
-          <ArrowLeft className="w-4 h-auto mr-2" /> Wróć
+        <Link className="flex cursor-pointer ml-4  " href={links.news}>
+          <ArrowLeft className="w-4 h-auto mr-2" /> Wszystkie aktualności
         </Link>
-        <h1 className="text-4xl px-4 pt-10 font-semibold">{data[0].title}</h1>
+
         <div
           className={`mt-16 prose prose-lg px-4 prose-blue w-full max-w-7xl flex flex-col ${inter.className}`}
         >

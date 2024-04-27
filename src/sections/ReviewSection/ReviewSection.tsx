@@ -43,15 +43,15 @@ async function ReviewSection() {
         <h2 className="p-0 m-0 text-[#3F8D40] text-center lg:text-left font-semibold text-3xl">
           Jak bawili się nasi klienci
         </h2>
-        <p className="py-10 font-semibold text-center lg:text-left text-xl">
+        <p className="py-10 font-semibold text-center lg:text-left text-xl pb-16 md:pr-8">
           Przez lata działalności naszego parku odwiedziły nas tysiące osób.
           Przeczytaj autentyczne opinie innych użytkowników i przekonaj się, że
-          z nami ani Ty, ani Twoje dziecko na pewno się nie znudzicie!
+          z nami ani Ty, ani Twoje dziecko na pewno nie będziecie sie nudzić!
         </p>
         <div className="w-full flex justify-start">
           <Link
             href={links.gallery}
-            className={`bg-gradient-to-r from-[#FF3E27] to-[#FF3061] py-4 px-10 rounded-full shadow-lg text-white transition-all shadow-on-hover hidden lg:block`}
+            className={`bg-gradient-to-r from-[#FF3E27] to-[#FF3061] py-4 px-10 rounded-full shadow-lg text-white transition-all shadow-on-hover hidden lg:block text-nowrap`}
           >
             Wszystkie opinie
           </Link>

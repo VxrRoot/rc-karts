@@ -35,7 +35,7 @@ const ContactSection = async () => {
       <div
         className={`flex lg:justify-around z-10 py-20 w-full   justify-center flex-row flex-wrap bg-transparent items-center max-w-7xl`}
       >
-        <div className="lg:w-[40rem]">
+        <div className="md:w-[40rem] w-full mx-4">
           <div className="rounded-3xl bg-[#f2f2f2]  shadow-xl p-8 md:p-10">
             <ContactForm />
           </div>

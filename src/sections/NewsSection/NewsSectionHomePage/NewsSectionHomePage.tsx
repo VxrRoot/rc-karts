@@ -14,8 +14,8 @@ const NewsSectionHomePage = async () => {
   const restPosts = response.slice(1);
 
   return (
-    <section className="w-full max-w-7xl mx-auto my-20 lg:my-32 px-4">
-      <h2 className="p-0 m-0 text-[#3F8D40] font-semibold text-3xl mb-6 ">
+    <section className="w-full max-w-7xl mx-auto mb-16 lg:my-32 px-4">
+      <h2 className="p-0 m-0 text-[#3F8D40] font-semibold text-4xl mb-6 text-center">
         Aktualności
       </h2>
       <div className="flex flex-col lg:flex-row ">
@@ -28,7 +28,7 @@ const NewsSectionHomePage = async () => {
             title={firstPost.title}
           />
         </div>
-        <div className="lg:basis-3/5 flex gap-6 justify-start flex-col">
+        <div className="lg:basis-3/5 gap-6 justify-start flex-col flex md:flex">
           {restPosts.map((item, idx) => (
             <SmallNews
               key={`${item.title}-${idx}`}
@@ -43,9 +43,9 @@ const NewsSectionHomePage = async () => {
       <div className="w-full flex justify-center">
         <Link
           href={links.news}
-          className={` bg-gradient-to-r from-[#FF3E27] to-[#FF3061] mt-10 py-4 px-10 rounded-full shadow-lg text-white transition-all shadow-on-hover`}
+          className={` bg-gradient-to-r from-[#FF3E27] to-[#FF3061] mt-10 py-4 px-10 rounded-full shadow-lg text-white transition-all shadow-on-hover text-nowrap`}
         >
-          Czytaj więcej
+          Wszystkie aktualności
         </Link>
       </div>
     </section>

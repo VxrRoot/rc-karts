@@ -14,7 +14,7 @@ const fill2 = "#00ff261f";
 const ServicesSection = () => {
   useEffect(() => {
     const blob = document.querySelector("#blob");
-    const targets = document.querySelectorAll(".service");
+    const targets = document.querySelectorAll(".trigger");
     let currentState = 1;
 
     const positions = {
@@ -131,7 +131,7 @@ const ServicesSection = () => {
         });
       },
       {
-        threshold: [0.5],
+        threshold: [viewportWidth >= 1000 ? 0.5 : 0.1],
       }
     );
 

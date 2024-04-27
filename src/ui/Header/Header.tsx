@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import { Burger } from "../Burger/Burger";
 import { InstaIcon, FacebookIcon } from "@/assets/icons";
 import styles from "./Header.module.scss";
-import logo from "@/assets/logo-small.png";
+import logo from "@/assets/logo.png";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -54,7 +54,7 @@ export default function Header() {
       >
         <div className="flex lg:flex-1">
           <Link href={links.homePage} className="-m-1.5 text-white p-1.5">
-            <Image src={logo} alt="logo" />
+            <Image src={logo} className="h-12 w-48" alt="logo" />
           </Link>
         </div>
         <div className="flex lg:hidden">
@@ -120,7 +120,7 @@ export default function Header() {
       >
         <div className="flex items-center justify-between">
           <Link href={links.homePage} className="pt-8 ml-4">
-            <Image src={logo} alt="logo" />
+            <Image src={logo} className="h-12 w-48" alt="logo" />
           </Link>
         </div>
         <div className="mt-6 h-full flex pt-16 justify-center">

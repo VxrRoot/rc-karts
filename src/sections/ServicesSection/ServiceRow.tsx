@@ -29,9 +29,11 @@ export const ServiceRow: FC<IServiceRow> = ({
   return (
     <div
       data-aos="fade-up"
-      className={`lg:flex-row flex lg:justify-around z-10 max-w-7xl w-full py-20 service justify-center flex-col bg-transparent items-center ${addtionalClassName}`}
+      className={`lg:flex-row flex lg:justify-around z-10 max-w-7xl w-full py-20 service justify-center flex-col bg-transparent items-center`}
     >
+      <div className={`${addtionalClassName} trigger`}>
       <Blob heading={heading} text={text} />
+      </div>
       <div className={`${scaleImage ? "scale-75" : ""}`}>
         <ServiceImg alt={alt} src={src} reversedShadow={isReversed} />
       </div>

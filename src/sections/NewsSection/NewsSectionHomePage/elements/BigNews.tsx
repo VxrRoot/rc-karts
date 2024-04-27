@@ -24,7 +24,7 @@ const BigNews: FC<IBigNews> = ({
   const [dateString, timeString] = publishedAt.split("T");
 
   return (
-    <article className="flex flex-col bg-white shadow-xl overflow-hidden rounded-[48px] h-[600px] mb-8 lg:mb-0">
+    <article className="flex flex-col bg-white shadow-xl overflow-hidden rounded-3xl h-[600px] mb-8 lg:mb-0">
       <Image
         src={image ? urlFor(image).url() : empytBlogImg}
         alt="News image"
@@ -32,7 +32,7 @@ const BigNews: FC<IBigNews> = ({
         width={2000}
         height={2000}
       />
-      <div className="px-8 py-4 rounded-[48px] -mt-14 bg-white h-full grow flex justify-around flex-col">
+      <div className="px-8 py-4 rounded-3xl -mt-14 bg-white h-full grow flex justify-around flex-col">
         <p className="text-[#3F8D40] text-2xl">{title}</p>
         <span>{dateString}</span>
         <p>{`${smallDescription.substring(0, 300)}...`}</p>

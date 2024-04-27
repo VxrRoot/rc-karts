@@ -43,7 +43,7 @@ const ReviewSlider: FC<IReviewSlider> = ({ elements }) => {
       {elements.map((item, idx) => (
         <SplideSlide key={idx} className="relative self-stretch text-white">
           <div
-            className={`gradient-background overflow-hidden shadow-lg rounded-3xl min-h-[20rem] h-full mx-8 relative p-12 `}
+            className={`gradient-background overflow-hidden shadow-lg rounded-3xl min-h-[20rem] mx-2 h-full relative p-12 `}
           >
             <div className="flex justify-between">
               <Link href={item.url} target="_blank">
