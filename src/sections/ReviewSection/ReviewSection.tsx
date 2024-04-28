@@ -62,7 +62,7 @@ async function ReviewSection() {
       </div>
       <Link
         href={links.review}
-        className={`bg-gradient-to-r from-[#FF3E27] to-[#FF3061] py-4 px-10 rounded-full shadow-lg text-white transition-all shadow-on-hover block mt-8 lg:hidden`}
+        className={`bg-gradient-to-r from-[#FF3E27] to-[#FF3061] py-4 px-10 rounded-full shadow-lg text-white transition-all shadow-on-hover block mt-8 lg:hidden text-nowrap w-100 md:w-auto`}
       >
         Wszystkie opinie
       </Link>
