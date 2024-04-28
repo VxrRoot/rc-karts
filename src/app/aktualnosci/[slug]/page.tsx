@@ -40,9 +40,9 @@ const SingleNews = async ({ params }: { params: { slug: string } }) => {
         <h1 className="text-4xl px-4  w-full font-bold text-center text-white absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">{data[0].title}</h1>
       </section>
       <article
-        className={`h-full -mt-48 pb-20 mx-auto max-w-7xl relative lg:min-h-[500px] min-h-[300px] ${inter.className} `}
+        className={`h-full -mt-48 pb-20 mx-auto max-w-7xl z-50 relative lg:min-h-[500px] min-h-[300px] ${inter.className} `}
       >
-        <Link className="flex cursor-pointer ml-4  " href={links.news}>
+        <Link className="flex cursor-pointer ml-4" href={links.news}>
           <ArrowLeft className="w-4 h-auto mr-2" /> Wszystkie aktualności
         </Link>
 
