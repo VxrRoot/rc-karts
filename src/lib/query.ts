@@ -60,3 +60,56 @@ export async function getPricelist() {
 
   return data;
 }
+
+export async function getFAQ() {
+  const query = `*[_type == "qna"] {
+    question,
+    answear
+  }`;
+
+  const data = await client.fetch(query);
+
+  return data;
+}
+
+export async function getNews(end = 5, start = 0) {
+  const query = `*[_type == "news"][${start}...${end}] | order(_createdAt desc)  {
+        id,
+        title,
+        smallDescription,
+        "currentSlug": slug.current,
+        titleImage,
+        publishedAt,
+        "count": count(*[_type == "news"])
+      }
+      `;
+
+  const data = await client.fetch(query);
+
+  return data;
+}
+
+export async function getSingleNews(slug: string) {
+  const query = `*[_type == 'news' && slug.current == '${slug}'] {
+    title,
+    content,
+    publishedAt,
+    titleImage
+  }`;
+
+  const data = await client.fetch(query);
+
+  return data;
+}
+
+export async function  getOpinions() {
+  const query = `*[_type == 'opinions'] {
+    opinion,
+    author,
+    url
+  }`;
+
+  const data = await client.fetch(query);
+
+  return data;
+}

@@ -20,7 +20,7 @@ const AboutSection = () => {
         <div className="flex lg:flex-row flex-col items-center justify-center">
           <div className={`${baloo.className} max-w-[600px] mt-10 text-xl `}>
             <h2 className={`${baloo.className} mb-5 text-4xl font-bold`}>
-              Gokarty RC KARTS
+              Gokarty RC KART
             </h2>
             <p>
               Nasza główna atrakcja czyli przyjazne dla Dzieci Modele RC Karts:

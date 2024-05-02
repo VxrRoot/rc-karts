@@ -12,6 +12,9 @@ async function GallerySection() {
 
   return (
     <section className={`md:pt-8 pb-32 overflow-hidden wrapper`}>
+      <h2 className="p-0 m-0 text-[#3F8D40] font-bold text-[7vmin] md:text-[5vmin] mb-6 text-center -rotate-[3deg]">
+        Zdjęcia z naszego parku
+      </h2>
       <GalleryRow className="" data={data}></GalleryRow>
       <GalleryRow className="-translate-x-[80rem]" data={data}></GalleryRow>
 

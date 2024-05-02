@@ -1,8 +1,7 @@
 import { links } from "@/constants";
-import Loader from "@/ui/Loader/Loader";
 import { Baloo_Chettan_2 } from "next/font/google";
 import Link from "next/link";
-import React, { FC } from "react";
+import { FC } from "react";
 import HeroImg from "./elements/HeroImg";
 
 const baloo = Baloo_Chettan_2({ subsets: ["latin"], weight: ["600", "800"] });
@@ -43,7 +42,10 @@ const HeroSection: FC<IHeroSection> = ({
             >
               Atrakcje
             </Link>
-            <Link href={links.pricelist} className="mt-4 lg:mt-0 lg:ml-12 color-on-hover">
+            <Link
+              href={links.pricelist}
+              className="mt-4 lg:mt-0 lg:ml-12 color-on-hover"
+            >
               Cennik
             </Link>
           </div>

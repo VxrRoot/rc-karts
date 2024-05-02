@@ -29,13 +29,13 @@ const ContactSection = async () => {
       id="contact"
       className={`flex soft-shadow px-2 md:px-8 flex-col items-center relative bg-cover bg-center z-30 bg-[url('../assets/contact-background.svg')] w-full min-h-[1000px] lg:min-h-[880px] ${baloo.className} ${styles.contact}`}
     >
-      <h3 className="text-secondary text-4xl mt-32 drop-shadow">
+      <h3 className="text-secondary text-4xl lg:text-5xl mt-32 drop-shadow">
         Skontaktuj się z nami
       </h3>
       <div
         className={`flex lg:justify-around z-10 py-20 w-full   justify-center flex-row flex-wrap bg-transparent items-center max-w-7xl`}
       >
-        <div className="lg:w-[40rem]">
+        <div className="md:w-[40rem] w-full mx-4">
           <div className="rounded-3xl bg-[#f2f2f2]  shadow-xl p-8 md:p-10">
             <ContactForm />
           </div>
@@ -45,7 +45,7 @@ const ContactSection = async () => {
             <div className="flex  items-center">
               <Link
                 className="flex flex-row justify-center items-center gap-6 drop-shadow-lg"
-                href="facebook"
+                href={`mailto:${data[0].email}`}
               >
                 {" "}
                 <EmailIcon /> {data[0].email}
@@ -54,7 +54,7 @@ const ContactSection = async () => {
             <div className="flex  items-center">
               <Link
                 className="flex flex-row justify-center items-center gap-6 drop-shadow-lg"
-                href="facebook"
+                href={`tel:${data[0].phone}`}
               >
                 {" "}
                 <PhoneIcon /> {data[0].phone}
@@ -63,7 +63,7 @@ const ContactSection = async () => {
             <div className="flex  items-center">
               <Link
                 className="flex flex-row justify-center items-center gap-6 drop-shadow-lg"
-                href="facebook"
+                href="#location"
               >
                 {" "}
                 <LocalIcon /> {data[0].address}

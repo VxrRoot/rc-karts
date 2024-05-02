@@ -88,7 +88,7 @@
 }
 
 .shadow-on-hover:hover{
-  transform: translateY(-.5rem);
+  transform: scale(1.05);
   filter: drop-shadow(0px 5px 5px #00000088);
 }
 
@@ -107,6 +107,17 @@
 .color-on-hover:hover path {
   color:  var(--secondaryc);
   fill: var(--secondaryc) !important;
+}
+
+.white-shadow{
+  filter: drop-shadow(0px 0px 8px white);
+}
+
+.mask {
+  -webkit-mask-image: url(../assets/mask.svg);
+  mask-image: url(../assets/mask.svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
 }
 
 
