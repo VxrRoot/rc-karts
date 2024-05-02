@@ -4,6 +4,7 @@ import Header from "@/ui/Header/Header";
 import type { Metadata } from "next";
 import { Baloo_Chettan_2 } from "next/font/google";
 import { AOSInit } from "./aos";
+import { GoogleTagManager } from "@next/third-parties/google";
 import "./globals.css";
 
 const baloo = Baloo_Chettan_2({
@@ -16,7 +17,8 @@ export const metadata: Metadata = {
     icon: "/favicons/favicon.ico",
   },
   title: "RC Kart gokarty i dmuchańce",
-  description: "Park zabaw dla dzieci gokarty i dmuchańce. Zabawa na miejscu w parku, wynajem oraz organizacja urodzin.",
+  description:
+    "Park zabaw dla dzieci gokarty i dmuchańce. Zabawa na miejscu w parku, wynajem oraz organizacja urodzin.",
   robots: {
     index: true,
     follow: true,
@@ -36,6 +38,7 @@ export default function RootLayout({
         {children}
         <Toaster />
         <Footer />
+        <GoogleTagManager gtmId={"GTM-TNZ68WT7"} />
       </body>
     </html>
   );
