@@ -35,7 +35,6 @@ async function ReviewSection() {
       rating: 5,
     },
   ];
-  console.log(response);
 
   return (
     <section className="pt-16 px-4   lg:flex-row max-w-7xl mx-auto flex flex-col items-center justify-center pb-32">

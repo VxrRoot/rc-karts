@@ -4,6 +4,8 @@ export async function POST(req: Request) {
   const body = await req.json();
   const { SMTP_EMAIL } = process.env;
 
+  const officeEmail = "office.rckart@gmail.com";
+
   const transporter = nodemailer.createTransport({
     service: "gmail",
     port: 465,
@@ -20,9 +22,9 @@ export async function POST(req: Request) {
   try {
     const inside = await transporter.sendMail({
       from: SMTP_EMAIL,
-      to: SMTP_EMAIL,
-      subject: `Nowa wiadomość od ${email} - ze strony harmoniaconsult`,
-      html: `siema test ${email} ${phone}`,
+      to: officeEmail,
+      subject: `Nowa wiadomość od ${email} - rckart.pl`,
+      html: `Email: ${email} Tel: ${phone} Wiadomość: ${message}`,
     });
 
     const outside = await transporter.sendMail({
