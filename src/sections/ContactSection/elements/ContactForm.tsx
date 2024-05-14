@@ -158,7 +158,7 @@ const ContactForm = () => {
       className="flex flex-col gap-2 justify-center h-full w-full"
     >
       <h3 className="text-[#FF3E27] text-3xl mb-4">
-        Masz pytanie? <br className="md:hidden"/> Napisz do nas
+        Masz pytanie? <br className="md:hidden" /> Napisz do nas
       </h3>
       <Input
         type="email"
