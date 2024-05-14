@@ -92,7 +92,7 @@ export async function POST(req: Request) {
       
                   
                   <a target="_blank" style="text-decoration: none;"
-                      href="https://rc-karts.vercel.app"><img height="60px" width="auto" border="0" vspace="0" hspace="0"
+                      href="https://rckart.pl"><img height="60px" width="auto" border="0" vspace="0" hspace="0"
                       src="https://www.rckart.pl/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.576b67f6.png&w=640&q=75"
                       width="150" height="50"
                       alt="Logo" title="Logo" style="

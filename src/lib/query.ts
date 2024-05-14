@@ -38,7 +38,8 @@ export async function getAttraction() {
   const query = `*[_type == 'attraction'] {
       name,
       description,
-      image
+      image,
+      rentable
     }`;
 
   const data = await client.fetch(query);
@@ -102,7 +103,7 @@ export async function getSingleNews(slug: string) {
   return data;
 }
 
-export async function  getOpinions() {
+export async function getOpinions() {
   const query = `*[_type == 'opinions'] {
     opinion,
     author,

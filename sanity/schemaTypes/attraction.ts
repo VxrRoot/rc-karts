@@ -18,5 +18,10 @@ export default {
       type: 'image',
       title: 'Zdjęcie',
     },
+    {
+      name: 'rentable',
+      type: 'boolean',
+      title: 'Do wynajecia',
+    },
   ],
 }
