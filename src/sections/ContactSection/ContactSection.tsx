@@ -83,6 +83,7 @@ const ContactSection = async () => {
                 <span>{sundayOpen}</span>
               </div>
               <div className="mt-10">
+              <p className="max-w-80 mb-4">Dla wejść grupowych możliwe otwarcie parku wcześniej</p>
                 <p className="max-w-80 text-base">
                   W przypadku złych warunków atmosferycznych atrakcje mogą być
                   nie czynne. Prosimy śledzić naszego facebooka oraz dzownić w

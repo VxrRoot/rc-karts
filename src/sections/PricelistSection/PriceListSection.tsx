@@ -15,7 +15,8 @@ const PriceListSection = async () => {
         className={` flex flex-col lg:flex-row justify-between ${baloo.className} border-b-2 py-4 px-2 border-black`}
       >
         <p className={``}>
-          Wynajem zjeżdżalni impreza prywatna do 8 godzin bez obsługi
+          Wynajem zjeżdżalni impreza prywatna do 8 godzin bez obsługi <br />
+          <sub>*Cena orientacyjna, może sie różnić w zależności od indywidualnych ustaleń</sub>
         </p>
         <p className="whitespace-nowrap lg:ml-4 ml-auto">
           {data.wynajemPriv} zł

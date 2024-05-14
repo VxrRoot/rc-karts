@@ -12,7 +12,12 @@ import { Baloo_Chettan_2 } from "next/font/google";
 const baloo = Baloo_Chettan_2({ subsets: ["latin"], weight: ["600", "800"] });
 
 interface IAttractionSlider {
-  elements: { name: string; description: string; image: StaticImageData }[];
+  elements: {
+    name: string;
+    description: string;
+    image: StaticImageData;
+    rentable: boolean;
+  }[];
 }
 
 const AttractionSlider: FC<IAttractionSlider> = ({ elements }) => {
@@ -38,7 +43,12 @@ const AttractionSlider: FC<IAttractionSlider> = ({ elements }) => {
       className="pt-0"
     >
       {elements.map((item, idx) => (
-        <SplideSlide key={idx} className="py-10 h-auto self-stretch text-white">
+        <SplideSlide
+          key={idx}
+          className={`py-10 h-auto self-stretch text-white ${
+            item.rentable ? "" : "rentable"
+          }`}
+        >
           <div
             className={`gradient-background overflow-hidden shadow-lg rounded-3xl h-[30rem] p-4 mx-8 relative`}
           >

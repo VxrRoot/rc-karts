@@ -20,6 +20,20 @@
   border: none !important;
 }
 
+.rentable {
+  &::after{
+    content: 'Do wynajęcia';
+    position: absolute;
+    rotate: -25deg;
+    background-color: var(--secondaryc);
+    top: 5%;
+    left: 0;
+    border-radius: 2rem;
+    padding: .5rem;
+    color: white;
+  }
+}
+
 .gradient-background {
   background: radial-gradient(circle at top left, var(--primaryc), var(--primaryc-darker));
 }

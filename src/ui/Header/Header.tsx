@@ -8,6 +8,7 @@ import { Burger } from "../Burger/Burger";
 import { InstaIcon, FacebookIcon } from "@/assets/icons";
 import styles from "./Header.module.scss";
 import logo from "@/assets/logo.png";
+import { YoutubeIcon } from "../../assets/icons";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -107,6 +108,13 @@ export default function Header() {
             >
               <InstaIcon />
             </Link>
+            <Link
+              href={links.youtube}
+              target="_blank"
+              className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7 text-white hover:text-secondaryc"
+            >
+              <YoutubeIcon />
+            </Link>
           </div>
         </div>
       </nav>
@@ -175,6 +183,13 @@ export default function Header() {
                 className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7 color-on-hover text-white hover:text-secondaryc"
               >
                 <InstaIcon />
+              </Link>
+              <Link
+                href={links.youtube}
+                target="_blank"
+                className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7 text-white hover:text-secondaryc"
+              >
+                <YoutubeIcon />
               </Link>
             </div>
           </div>
