@@ -5,8 +5,6 @@ import { links } from "@/constants";
 import Link from "next/link";
 import { getOpinions } from "@/lib/query";
 
-const baloo = Baloo_Chettan_2({ subsets: ["latin"], weight: ["600", "800"] });
-
 async function ReviewSection() {
   const response = await getOpinions();
   const data = await [

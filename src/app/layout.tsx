@@ -6,6 +6,7 @@ import { Baloo_Chettan_2 } from "next/font/google";
 import { AOSInit } from "./aos";
 import { GoogleTagManager } from "@next/third-parties/google";
 import "./globals.css";
+import CookieBanner from "@/ui/CookieBanner/CookieBanner";
 
 const baloo = Baloo_Chettan_2({
   subsets: ["latin"],
@@ -38,6 +39,7 @@ export default function RootLayout({
         {children}
         <Toaster />
         <Footer />
+        <CookieBanner />
         <GoogleTagManager gtmId={"GTM-P4C8HR4X"} />
       </body>
     </html>

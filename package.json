@@ -24,6 +24,7 @@
     "@types/nodemailer": "^6.4.14",
     "aos": "^2.3.4",
     "class-variance-authority": "^0.7.0",
+    "client-only": "^0.0.1",
     "clsx": "^2.1.0",
     "gsap": "^3.12.5",
     "lucide-react": "^0.356.0",
