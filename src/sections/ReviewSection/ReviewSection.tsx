@@ -5,8 +5,6 @@ import { links } from "@/constants";
 import Link from "next/link";
 import { getOpinions } from "@/lib/query";
 
-const baloo = Baloo_Chettan_2({ subsets: ["latin"], weight: ["600", "800"] });
-
 async function ReviewSection() {
   const response = await getOpinions();
   const data = await [
@@ -35,7 +33,6 @@ async function ReviewSection() {
       rating: 5,
     },
   ];
-  console.log(response);
 
   return (
     <section className="pt-16 px-4   lg:flex-row max-w-7xl mx-auto flex flex-col items-center justify-center pb-32">

@@ -5,6 +5,7 @@ import { TextArea } from "@/ui/TextArea/TextArea";
 import { toast } from "@/components/ui/use-toast";
 import Link from "next/link";
 import { links } from "@/constants";
+import Spinner from "@/ui/Loader/Spinner";
 
 interface FormValueType {
   email: string;
@@ -38,6 +39,7 @@ const messageRegex = /.{3,}/;
 
 const ContactForm = () => {
   const [formValue, setFormValue] = useState<FormValueType>(initFormValue);
+  const [isLoading, setIsLoading] = useState(false);
 
   const [formFieldsErrors, setFormFieldErrors] = useState(initFieldErrors);
 
@@ -115,6 +117,7 @@ const ContactForm = () => {
 
   const handleSubmitForm = async (e: any) => {
     e.preventDefault();
+    setIsLoading(true);
 
     const {
       isValidateEmail,
@@ -128,8 +131,10 @@ const ContactForm = () => {
       !isValidatePhone ||
       !isValidateMessage ||
       !isValidConsent
-    )
+    ) {
+      setIsLoading(false);
       return;
+    }
 
     const response = await fetch("/api/sendMail", {
       method: "POST",
@@ -138,6 +143,8 @@ const ContactForm = () => {
       },
       body: JSON.stringify(formValue),
     });
+
+    setIsLoading(false);
 
     if (response.ok) {
       setFormValue(initFormValue);
@@ -158,7 +165,7 @@ const ContactForm = () => {
       className="flex flex-col gap-2 justify-center h-full w-full"
     >
       <h3 className="text-[#FF3E27] text-3xl mb-4">
-        Masz pytanie? <br className="md:hidden"/> Napisz do nas
+        Masz pytanie? <br className="md:hidden" /> Napisz do nas
       </h3>
       <Input
         type="email"
@@ -188,7 +195,7 @@ const ContactForm = () => {
           formFieldsErrors.message && !messageRegex.test(formValue.message)
         }
       />
-      <label className="flex items-center gap-2">
+      <label className="flex items-center gap-2 cursor-pointer">
         <input
           type="checkbox"
           className={`accent-[#FF3061] w-4 h-4 rounded-lg ${
@@ -207,8 +214,8 @@ const ContactForm = () => {
           !formValue.consent &&
           "Musisz zaakceptować politykę prywatności"}
       </span>
-      <button className="bg-gradient-to-r from-[#FF3E27] to-[#FF3061] py-2 px-10 rounded-2xl text-white w-full md:w-32 ">
-        Wyślij
+      <button className="bg-gradient-to-r from-[#FF3E27] to-[#FF3061] py-2 px-10 h-10 rounded-2xl text-white w-full md:w-32 ">
+        {isLoading ? <Spinner /> : "Wyślij"}
       </button>
     </form>
   );

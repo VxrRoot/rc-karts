@@ -46,7 +46,7 @@ const AttractionSlider: FC<IAttractionSlider> = ({ elements }) => {
         <SplideSlide
           key={idx}
           className={`py-10 h-auto self-stretch text-white ${
-            item.rentable ? "" : "rentable"
+            item.rentable ? "rentable" : ""
           }`}
         >
           <div
