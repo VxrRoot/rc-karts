@@ -12,7 +12,7 @@ import Spinner from "@/ui/Loader/Spinner";
 import { Suspense } from "react";
 import ReviewSection from "../sections/ReviewSection/ReviewSection";
 
-export const revalidate = 0;
+export const revalidate = 3600;
 
 export default function Home() {
   return (

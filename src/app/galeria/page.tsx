@@ -2,7 +2,7 @@ import { getGalleryImages } from "@/lib/query";
 import GallerySection from "@/sections/GallerySection/GallerySection";
 import HeroSection from "@/sections/HeroSection/HeroSection";
 
-export const revalidate = 0;
+export const revalidate = 3600;
 
 const page = async () => {
   const imagesData = await getGalleryImages();
