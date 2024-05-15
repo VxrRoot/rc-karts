@@ -111,7 +111,7 @@ export default function Header() {
             <Link
               href={links.youtube}
               target="_blank"
-              className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7 text-white hover:text-secondaryc"
+              className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7 text-white color-on-hover hover:text-secondaryc"
             >
               <YoutubeIcon />
             </Link>
@@ -187,7 +187,7 @@ export default function Header() {
               <Link
                 href={links.youtube}
                 target="_blank"
-                className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7 text-white hover:text-secondaryc"
+                className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7 text-white color-on-hover"
               >
                 <YoutubeIcon />
               </Link>

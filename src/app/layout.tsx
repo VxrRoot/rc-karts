@@ -16,9 +16,9 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicons/favicon.ico",
   },
-  title: "RC Kart gokarty i dmuchańce",
+  title: "RC Kart KIDS Podkarpacie",
   description:
-    "Park zabaw dla dzieci gokarty i dmuchańce. Zabawa na miejscu w parku, wynajem oraz organizacja urodzin.",
+    "Park zabaw dla dzieci gokarty i dmuchańce. Zabawa na miejscu w parku, wynajem oraz organizacja urodzin.Najlepsza zabawa w okolicach Krosna na podkarpaciu",
   robots: {
     index: true,
     follow: true,

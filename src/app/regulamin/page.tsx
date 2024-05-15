@@ -29,10 +29,6 @@ const page = () => {
         <h2 className="text-2xl font-semibold mt-5">3. Higiena</h2>
         <ul className="list-disc pl-5 mt-2">
           <li>
-            Przed wejściem do parku należy skorzystać z płynu do dezynfekcji
-            rąk.
-          </li>
-          <li>
             Jedzenie i picie jest dozwolone tylko w wyznaczonych strefach.
           </li>
         </ul>

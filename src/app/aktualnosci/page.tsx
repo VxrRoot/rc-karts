@@ -9,6 +9,8 @@ import { NextPage } from "next";
 import { Suspense } from "react";
 import { PageProps } from "../../../.next/types/app/page";
 
+export const revalidate = 3600;
+
 const Page: NextPage<PageProps> = async ({ searchParams }) => {
   const page = searchParams["page"] ?? defaultPage;
   const perPage = searchParams["per_page"] ?? defaultPerPage;
