@@ -7,9 +7,13 @@ import cookieSvg from "@/assets/cookieIcon.svg";
 import Image from "next/image";
 
 export default function CookieBanner() {
-  const storedCookieConsent = getLocalStorage("cookie_consent", null);
+  const [cookieConsent, setCookieConsent] = useState<null | boolean>(null);
 
-  const [cookieConsent, setCookieConsent] = useState(storedCookieConsent);
+  useEffect(() => {
+    const storedCookieConsent = getLocalStorage("cookie_consent", null);
+
+    setCookieConsent(storedCookieConsent);
+  }, [setCookieConsent]);
 
   useEffect(() => {
     setLocalStorage("cookie_consent", cookieConsent);
