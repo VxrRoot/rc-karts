@@ -1,12 +1,22 @@
 "use client";
-import { FC } from "react";
+import testImg from "@/assets/empty.png";
+import {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import Image, { StaticImageData } from "next/image";
-import testImg from "@/assets/empty.png";
+import { FC } from "react";
 import "../AttractionSection.scss";
 // Default theme
-import "@splidejs/react-splide/css";
 import { urlFor } from "@/lib/sanity";
+import { PortableText } from "@portabletext/react";
+import "@splidejs/react-splide/css";
 import { Baloo_Chettan_2 } from "next/font/google";
 
 const baloo = Baloo_Chettan_2({ subsets: ["latin"], weight: ["600", "800"] });
@@ -14,7 +24,7 @@ const baloo = Baloo_Chettan_2({ subsets: ["latin"], weight: ["600", "800"] });
 interface IAttractionSlider {
   elements: {
     name: string;
-    description: string;
+    description: any;
     image: StaticImageData;
     rentable: boolean;
   }[];
@@ -43,32 +53,57 @@ const AttractionSlider: FC<IAttractionSlider> = ({ elements }) => {
       className="pt-0"
     >
       {elements.map((item, idx) => (
-        <SplideSlide
-          key={idx}
-          className={`py-10 h-auto self-stretch text-white ${
-            item.rentable ? "rentable" : ""
-          }`}
-        >
-          <div
-            className={`gradient-background overflow-hidden shadow-lg rounded-3xl h-[30rem] p-4 mx-8 relative`}
+        <Dialog key={idx}>
+          <SplideSlide
+            className={`py-10 h-auto self-stretch text-white ${
+              item.rentable ? "rentable" : ""
+            }`}
           >
-            <div className="relative w-full h-full rounded-lg overflow-auto">
-              <Image
-                alt={item.name}
-                width={400}
-                height={400}
-                src={item.image ? urlFor(item.image).url() : testImg}
-                className="rounded-lg h-full w-full object-cover "
-              />
-              <div className="gradient-overlay absolute w-full h-full left-0 top-0 "></div>
-              <h3
-                className={`pt-8 pb-6 font-semibold text-3xl absolute bottom-0 w-full overflow-hidden text-center ${baloo.className}`}
-              >
-                {item.name}
-              </h3>
+            <div
+              className={`gradient-background overflow-hidden shadow-lg rounded-3xl h-[30rem] p-4 mx-8 relative`}
+            >
+              <div className="relative w-full h-full rounded-lg overflow-auto">
+                <Image
+                  alt={item.name}
+                  width={400}
+                  height={400}
+                  src={item.image ? urlFor(item.image).url() : testImg}
+                  className="rounded-lg h-full w-full object-cover "
+                />
+                <div className="gradient-overlay absolute w-full h-full left-0 top-0 " />
+                <h3
+                  className={`pt-8 pb-12 font-semibold text-3xl absolute bottom-0 w-full overflow-hidden text-center ${baloo.className}`}
+                >
+                  {item.name}
+                </h3>
+                <div className="absolute bottom-2 flex items-center justify-center w-full">
+                  <DialogTrigger>
+                    <span className="block px-4 py-1 rounded-full mx-auto bg-secondaryc overflow-hidden text-center">
+                      Szczegóły
+                    </span>
+                  </DialogTrigger>
+                </div>
+              </div>
             </div>
-          </div>
-        </SplideSlide>
+          </SplideSlide>
+          <DialogContent className="gradient-background border-none rounded-xl text-white">
+            <DialogHeader>
+              <DialogTitle className="text-2xl">
+                Szczegóły {item.name}
+              </DialogTitle>
+            </DialogHeader>
+            <div>
+              <PortableText value={item.description} />
+            </div>
+            <DialogFooter className="sm:justify-start">
+              <DialogClose asChild>
+                <button className="block px-4 py-1 rounded-full mx-auto bg-secondaryc overflow-hidden text-center">
+                  Zamknij
+                </button>
+              </DialogClose>
+            </DialogFooter>
+          </DialogContent>
+        </Dialog>
       ))}
     </Splide>
   );
