@@ -62,9 +62,29 @@ const Footer = () => {
         </div>
       </div>
       <div className="border-b border-gray-100"></div>
-      <div className="container px-4 mx-auto">
-        <p className="py-10 md:pb-20 text-md text-gray-400 font-medium text-center">
+      <div className="container px-4 mx-auto py-10 md:pb-20">
+        <p className=" text-md text-gray-400 font-medium text-center">
           © 2024 rckart.pl Wszystkie prawa zastrzeżone.
+        </p>
+        <p className="text-center pt-2 text-gray-400 flex flex-col md:flex-row md:gap-2 justify-center">
+          <span>Projekt i realizacja:</span>
+          <span>
+            <a
+              href="https://www.linkedin.com/in/%C5%82ukasz-jasi%C5%84ski-171a78249/"
+              target="_blank"
+              className="hover:text-primaryc transition-all"
+            >
+              Łukasz Jasiński
+            </a>
+            {" & "}{" "}
+            <a
+              href="https://www.web-nova.pl/"
+              target="_blank"
+              className="hover:text-primaryc transition-all"
+            >
+              WebNova
+            </a>
+          </span>
         </p>
       </div>
     </footer>
